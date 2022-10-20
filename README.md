@@ -11,7 +11,7 @@
 
 ### **_Description_**
 
-#### Welcome to "Meet Your Maker", a platform that recognizes and celebrates the unsung hobbyists, doers, creators and makers of the world.  Looking for someone to build you a dining room table? Bake a cake for your birthday party? Fabricate and 3D print a custom part for your motorcycle? Meet Your Maker will connect you with local talent to help you accomplish your task. The site is multi-focuesed, serving as a directory for hireable local talent that would otherwise have little to no exposure, a meeting place for like-minded creatives, and a buisness platform where jobs can be commissioned.  
+#### Welcome to "Meet Your Maker" - a platform that recognizes and celebrates the unsung hobbyists, doers, creators and makers of the world. Curious about the talent that lives in your neighborhood?   Looking for someone to build you a dining room table? Bake a cake for your birthday party? Fabricate and 3D print a custom part for your motorcycle?  Meet Your Maker will connect you with local doers to help you accomplish your task.  The site is multi-focuesed, serving as a directory for hireable local talent that would otherwise have little to no exposure, a meeting place for like-minded creatives, and (post-MVP) a buisness platform where jobs can be commissioned.  
 
 ---
 
@@ -20,7 +20,7 @@
 This app will be built using MERN stack technologies:
 
 - MongoDB for hosting user and maker data
-- Express/Node as the web framework/server by which we connect our front and backends
+- Express/Node as the web framework/server by which front and back ends are connected
 - React to power the front end web UI
 
 ---
