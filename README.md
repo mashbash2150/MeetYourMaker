@@ -5,7 +5,7 @@
 
 ### By: Madeline Ashley
 
-### [LinkedIn](https://www.linkedin.com/in/madeline-ashley-11a4413a/) | [GitHub](https://github.com/mashbash2150) | [Website](www.hellomashley.com)
+### [LinkedIn](https://www.linkedin.com/in/madeline-ashley-11a4413a/) | [GitHub](https://github.com/mashbash2150) | [Trello Board](https://trello.com/invite/b/VHeHUY6Y/ATTIe4ac9d23cda64f2086eee7f786abff77491FF058/meet-your-maker-sei-project-2) | [Website](www.hellomashley.com)
 
 ---
 
@@ -18,9 +18,10 @@
 ### **_Technologies_**
 
 This app will be built using MERN stack technologies:
--MongoDB for hosting user and maker data
--Express/Node as the web framework/server by which we connect our front and backends
--React to power the front end web UI
+
+- MongoDB for hosting user and maker data
+- Express/Node as the web framework/server by which we connect our front and backends
+- React to power the front end web UI
 
 ---
 
