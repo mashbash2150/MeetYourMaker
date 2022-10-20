@@ -33,7 +33,7 @@ This app will be built using MERN stack technologies:
 ---
 ![ComponentHierarchy](https://github.com/mashbash2150/MeetYourMaker-Unit-2-Project/blob/main/Images/Screen%20Shot%202022-10-19%20at%209.05.09%20PM.png?raw=true)
 
-![ERD](https://github.com/mashbash2150/MeetYourMaker-Unit-2-Project/blob/main/Images/Screen%20Shot%202022-10-19%20at%209.15.02%20PM.png?raw=true)
+![ERD](https://github.com/mashbash2150/MeetYourMaker-Unit-2-Project/blob/main/Images/Screen%20Shot%202022-10-20%20at%208.22.28%20AM.png?raw=true)
 
 ### **_Future Updates_**
 
