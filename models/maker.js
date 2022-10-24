@@ -12,7 +12,7 @@ const Maker = new Schema(
         image:{type:String, required:false},
         gallery: { type: Array, required: false },
         phone: { type: String, required: false },
-        status: { type: Number, required: false },
+        status: { type: String, required: false },
         rating: { type: String, required: false },
 
     },
