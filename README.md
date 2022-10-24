@@ -53,3 +53,8 @@ This app will be built using MERN stack technologies:
 
 
 #### Markdown Guide: [IA.net](https://ia.net/writer/support/general/markdown-guide)
+
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_display_element_hover
+https://www.w3schools.com/howto/howto_css_dropdown.asp
+
+https://www.pngdownload.id/png-8o8h8v/

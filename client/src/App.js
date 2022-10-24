@@ -2,6 +2,8 @@
 import './App.css';
 import Nav from "./components/Nav"
 import Feed from "./Pages/Feed"
+import Home from "./Pages/Home"
+import About from "./Pages/About"
 import MakerCard from "./components/MakerCard"
 import Header from "./components/Header"
 import { Route, Routes } from 'react-router-dom'
@@ -15,12 +17,11 @@ function App() {
         <Header/>
     </header>
     <main>
-     <nav>
-      <Nav/>
-     </nav>
-       <div>
-        <MakerCard />
-        </div> 
+       <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/makers" element={<MakerCard/>}/>
+      </Routes>
     </main>
     </div>
   );

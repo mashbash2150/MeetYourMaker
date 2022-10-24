@@ -23,7 +23,7 @@ const MakerCard = () => {
     <div className="container">
 
       {makerList.map((maker) => (
-        <div className="makerCard" key={maker.id} >
+        <div className="makerCard" key={maker._id} >
           <div className="staticCardInfo">
             <img src={maker.image} alt=""></img>
             <h2>{maker.name}</h2>
