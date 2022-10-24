@@ -17,7 +17,7 @@ const Header = () => {
           <Link to="/about">About </Link>
           <Link to="/makers">All Makers </Link>
           <Link to="/search">Search </Link>
-          <Link to="/add">Add Maker </Link>
+          <Link to="/makers/add">Add Maker </Link>
         </div>
       </div>
 

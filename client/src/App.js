@@ -4,6 +4,7 @@ import Nav from "./components/Nav"
 import Feed from "./Pages/Feed"
 import Home from "./Pages/Home"
 import About from "./Pages/About"
+import Add from "./Pages/Add"
 import MakerCard from "./components/MakerCard"
 import Header from "./components/Header"
 import { Route, Routes } from 'react-router-dom'
@@ -21,6 +22,8 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/makers" element={<MakerCard/>}/>
+        <Route path="/makers/add" element={<Add/>}/>
+
       </Routes>
     </main>
     </div>
