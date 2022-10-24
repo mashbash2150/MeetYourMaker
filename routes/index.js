@@ -3,6 +3,7 @@ const controllers=require('../controllers')
 const router = Router();
 
 router.get('/', (req, res) => res.send('This is root!'))
+
 // app.get(`/makers`, makerController.getMakers)
 router.get("/makers/add", controllers.createMaker)
 
@@ -22,6 +23,8 @@ router.get('/search',controllers.search)
 router.get('/search/:makerId',controllers.searchResult)
 
 router.get('/about',controllers.about)
+
+
 
 // app.get('/', (req,res) =>{
 //   res.send("This is the Landing Page")

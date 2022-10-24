@@ -3,18 +3,16 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const Maker = new Schema(
+const Project = new Schema(
     {
-        name: { type: String, required: true },
-        location: { type: String, required: true },
-        summary: { type: String, required: false },
+        title: { type: String, required: true },
+        description: { type: String, required: true },
+        maker: { type: String, required: false },
         skills: { type: Array, required: true },
         image:{type:String, required:false},
         gallery: { type: Array, required: false },
-        phone: { type: String, required: false },
-        status: { type: String, required: false },
-        rating: { type: String, required: false },
         featured:{type:Boolean,required:false}
+        
 
     },
     { timestamps: true },
@@ -24,4 +22,4 @@ const Maker = new Schema(
 
 
 //i need help understanding why db will ony seed with this, but server will only run with above
-module.exports = mongoose.model('Maker', Maker)
+module.exports = mongoose.model('Project', Project)

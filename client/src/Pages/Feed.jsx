@@ -6,8 +6,16 @@ import axios from "axios"
 const Feed = () => {
 
   const [makerList, setMakerList] = useState([])
+  const [projectList, setProjectList] = useState([])
 
-  const getAllMakers = async () => {
+  const getFeaturedMakers = async () => {
+    const response = await axios.get(`http://localhost:3001/api/makers`)
+    console.log(response.data.makers)
+    setMakerList(response.data.makers)
+    console.log(makerList)
+  }
+
+  const getFeaturedProjects = async () => {
     const response = await axios.get(`http://localhost:3001/api/makers`)
     console.log(response.data.makers)
     setMakerList(response.data.makers)
@@ -15,7 +23,11 @@ const Feed = () => {
   }
 
   useEffect(() => {
-    getAllMakers()
+    getFeaturedMakers()
+  }, [])
+
+  useEffect(() => {
+    getFeaturedProjects()
   }, [])
 
   return (

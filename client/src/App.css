@@ -33,14 +33,19 @@ body {
   color: #61dafb;
 }
 
-nav {
+.nav {
   background-color: #212121;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   height: 3em;
   color: white;
+}
 
+
+.navitems {
+  padding: 0px 20px;
+  justify-items: flex-end;
 }
 
 .title {
@@ -52,5 +57,31 @@ nav {
 
   padding: 1em;
   background-color: lightblue;
+
+}
+
+.makerCard {
+  background-color: goldenrod;
+  min-height: 20vh;
+  border-radius: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 40vw 40vw;
+
+  justify-content: center;
+  grid-gap: 1em;
+  text-align: center;
+
+}
+
+.hide {
+  display: none;
+}
+
+.staticCardInfo:hover+.hide {
+  display: block;
+  color: black;
 
 }

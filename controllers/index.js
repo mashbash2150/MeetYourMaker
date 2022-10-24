@@ -23,6 +23,15 @@ const getMakers=async(req,res)=>{
 }
 }
 
+const getFeaturedMakers=async(req,res)=>{
+  try {
+    const makers = await Maker.find({featured:true})
+    return res.status(200).json({ makers })
+} catch (error) {
+    return res.status(500).send(error.message);
+}
+}
+
 const getMakersById= async (req,res)=>{
   try {
     const { id } = req.params;
@@ -81,6 +90,7 @@ const deleteMaker = async (req, res) => {
 module.exports={
   createMaker,
   getMakers,
+  getFeaturedMakers,
   getMakersById,
   search,
   searchResult,
