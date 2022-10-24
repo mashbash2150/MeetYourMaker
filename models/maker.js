@@ -9,6 +9,7 @@ const Maker = new Schema(
         location: { type: String, required: true },
         summary: { type: String, required: false },
         skills: { type: Array, required: true },
+        image:{type:String, required:false},
         gallery: { type: Array, required: false },
         phone: { type: String, required: false },
         status: { type: Number, required: false },
@@ -18,8 +19,8 @@ const Maker = new Schema(
     { timestamps: true },
 )
 
-module.exports=Maker
+// module.exports=Maker
 
 
 //i need help understanding why db will ony seed with this, but server will only run with above
-// module.exports = mongoose.model('Maker', Maker)
+module.exports = mongoose.model('Maker', Maker)
