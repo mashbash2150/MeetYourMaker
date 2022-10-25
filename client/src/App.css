@@ -1,12 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Roboto+Mono:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 
 body {
   margin: 0 auto;
   font-family: 'Rajdhani', sans-serif;
 }
 
+.image-gallery {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  text-align: center;
 
+}
+
+.image-gallery img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10%;
+  justify-self: center;
+
+}
 
 
 
@@ -18,6 +33,32 @@ body {
   height: 3em;
   color: white;
 }
+
+.detailsbody {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 35vh 45vh 5vh;
+
+}
+
+.detailsbody p {
+  order: 2;
+  font-size: 48px;
+  grid-column-start: 3;
+  grid-row-start: 1;
+  justify-self: center;
+
+
+}
+
+.makerDetails {
+  grid-column-start: 2;
+  grid-row: 1/2;
+  text-align: center;
+  align-self: center;
+
+}
+
 
 
 .header {
@@ -31,13 +72,12 @@ body {
   margin: 0 0 0.4em 0;
 
 
-
 }
 
-.title {
+.title img {
   grid-column-start: 2;
   grid-row-start: 2;
-  font-size: 3em;
+  width: 100vw;
 }
 
 .makerCard {
@@ -53,6 +93,47 @@ body {
   justify-content: center;
 
   text-align: center;
+
+}
+
+.feature-container {
+  display: grid;
+  grid-template-columns: 25vw 25vw 25vw 25vw;
+  justify-content: center;
+
+  text-align: center;
+
+}
+
+
+
+.flex-top {
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  margin: 0px;
+  column-gap: 25px;
+
+
+}
+
+.skill-tile h2 {
+  display: flex;
+  background-color: rgba(145, 28, 28, 0.924);
+  width: 150px;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10%;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+
+}
+
+
+.flex-bottom {
+  display: flex;
+  justify-content: space-around;
+  flex-basis: 25vw;
 
 }
 
@@ -73,6 +154,13 @@ body {
   height: 30px;
 
 
+}
+
+.staticCardInfo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5%;
+  opacity: 0.85;
 }
 
 .dropbtn {
@@ -147,4 +235,13 @@ form {
 .input {
   width: 60%;
   margin: 0.2em 0 2em 0;
+}
+
+.hidden {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  font-size: 3em;
+  justify-self: center;
+  opacity: 0.0;
+
 }

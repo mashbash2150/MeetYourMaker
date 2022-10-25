@@ -8,10 +8,12 @@ const Header = () => {
 
   return (
     <div className="header">
-      <div className='title' >MEET YOUR MAKER </div>
+      <div className='title' >
+        <img src="/Users/madelineashley/GA_SEIR/Projects/MeetYourMaker/Images/Untitled (500 × 250 px).jpg" alt=""></img>
+      </div>
 
       <div className="dropdown">
-        <div className="dropbtn"><span class="material-symbols-outlined">
+        <div className="dropbtn"><span className="material-symbols-outlined">
           menu
         </span></div>
         <div className="dropdown-content">
