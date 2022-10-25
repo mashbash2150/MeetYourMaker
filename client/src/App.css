@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Roboto+Mono:wght@200;400&display=swap');
+
 body {
   margin: 0 auto;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 
@@ -63,6 +66,15 @@ body {
 
 }
 
+.staticCardInfo h5 {
+  text-align: left;
+  padding: -10px 0px 0px 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 30px;
+
+
+}
+
 .dropbtn {
   background-color: lightblue;
   color: black;
@@ -70,35 +82,38 @@ body {
   font-size: 0.8em;
   border: none;
   line-height: 0.25em;
+  text-decoration: none;
 
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
   grid-column-start: 3;
   grid-row-start: 3;
+  text-decoration: none;
+
 }
 
 .dropdown-content {
   display: none;
   position: relative;
-  background-color: #f1f1f1;
-
+  background-color: #b5afaf;
+  color: green;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+
 }
 
-.dropdown-content p {
+.dropdown-content a {
   color: rgb(16, 0, 0);
   padding: 0.5em 0.3em;
   text-decoration: none;
   display: block;
-  font-size: 10px;
+  font-size: 1.5em;
 }
 
-.dropdown-content p:hover {
+.dropdown-content a:hover {
   background-color: #ddd;
+  text-decoration: none;
 }
 
 .dropdown:hover .dropdown-content {
@@ -107,6 +122,7 @@ body {
 
 .dropdown:hover .dropbtn {
   font-size: 1em;
+  text-decoration: none;
 }
 
 .subheader {
@@ -118,4 +134,17 @@ body {
 
 Link {
   font-size: 10px;
+}
+
+form {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  margin: 5vh 0 0 0;
+
+}
+
+.input {
+  width: 60%;
+  margin: 0.2em 0 2em 0;
 }

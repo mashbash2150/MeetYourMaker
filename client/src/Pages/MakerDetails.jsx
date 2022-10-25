@@ -1,35 +1,29 @@
 import { useState, useEffect } from "react"
+import { useParams } from "react-router-dom"
 // import maker from "../../../models/maker"
 import axios from "axios"
 
 
+
 const MakerDetails = () => {
+  let { id } = useParams()
+  console.log(id)
+  const [makerDetails, setMakerDetails] = useState('')
 
-  const [maker, setMaker] = useState([])
-
-
-  const getMakerById = async () => {
-    const response = await axios.get(`http://localhost:3001/api/makers`)
-    console.log(response.data.makers)
-    setMaker(response.data.makers)
-    console.log(makerList)
+  const getMakerDetails = async (e) => {
+    const response = await axios.get(`http://localhost:3001/api/makers/${id}`)
+    console.log(response.data)
+    setMakerDetails(response)
   }
-
-
   useEffect(() => {
-    getMakerById()
+    getMakerDetails()
   }, [])
-
-
 
   return (
 
-    <div className="makersList">
-      {makerList.map((maker) => (
-        <div key={maker.id} className="makerCard">
-          <p>Maker: {maker.name}</p>
-        </div>
-      ))}
+    <div className="makersList" >DETAILS
+      <h2>Name:{makerDetails.name}</h2>
+
     </div>
 
   )
@@ -38,4 +32,4 @@ const MakerDetails = () => {
 
 
 
-export default Feed
+export default MakerDetails

@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react"
 // import maker from "../../../models/maker"
 import axios from "axios"
+import MakerDetails from "../Pages/MakerDetails"
+import { Navigate, useNavigate } from "react-router-dom"
 
 
 
 const MakerCard = () => {
+  let navigate = useNavigate()
 
   const [makerList, setMakerList] = useState([])
 
@@ -15,6 +18,13 @@ const MakerCard = () => {
     console.log(makerList)
   }
 
+  const getMakerDetails = async (arg) => {
+
+    navigate(`/makers/${arg._id}`);
+    <MakerDetails />
+
+  }
+
   useEffect(() => {
     getAllMakers()
   }, [])
@@ -23,11 +33,13 @@ const MakerCard = () => {
     <div className="container">
 
       {makerList.map((maker) => (
-        <div className="makerCard" key={maker._id} >
+        <div className="makerCard" key={maker._id} onClick={() => getMakerDetails(maker)}>
           <div className="staticCardInfo">
             <img src={maker.image} alt=""></img>
+
             <h2>{maker.name}</h2>
             <h4><em>{maker.summary}</em></h4>
+
 
           </div>
           <div className="hide">

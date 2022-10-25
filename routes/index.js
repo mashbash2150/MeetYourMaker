@@ -2,9 +2,16 @@ const { Router } = require('express');
 const controllers=require('../controllers')
 const router = Router();
 
-router.get('/', (req, res) => res.send('This is root!'))
+// router.get('/', (req, res) => res.send('This is root!'))
+router.get('/', controllers.getFeaturedMakers)
 
 // app.get(`/makers`, makerController.getMakers)
+
+router.get(`/makers/:id`, controllers.getMakersById)
+router.put('/makers/:id', controllers.updateMaker)
+
+router.delete('/makers/:id', controllers.deleteMaker)
+
 router.get("/makers/add", controllers.createMaker)
 
 router.post("/makers/add", controllers.createMaker)
@@ -13,14 +20,12 @@ router.get("/makers",controllers.getMakers)
 
 router.get(`/makers/:id`, controllers.getMakersById)
 
-router.put('/makers/:id', controllers.updateMaker)
 
-router.delete('/makers/:id', controllers.deleteMaker)
 
 
 router.get('/search',controllers.search)
 
-router.get('/search/:makerId',controllers.searchResult)
+// router.get('/search/:makerId',controllers.searchResult)
 
 router.get('/about',controllers.about)
 

@@ -6,7 +6,11 @@ const AddMaker = () => {
   const initialState = {
     name: '',
     location: '',
-    summary: ''
+    summary: '',
+    skills: [],
+    phone: '',
+    status: '',
+    images: 'placeholder for image upload'
   };
   const [formState, setFormState] = useState(initialState)
 
@@ -36,16 +40,26 @@ const AddMaker = () => {
 
 
   return (
-
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="name">Maker Name:</label>
-      <input type="text" id="name" onChange={handleChange} value={formState.name} />
-      <label htmlFor="location">Location:</label>
-      <input type="text" id="location" onChange={handleChange} value={formState.location} />
-      <label htmlFor="summary">Maker Summary</label>
-      <textarea id="summary" cols="30" rows="10" onChange={handleChange} value={formState.summary}></textarea>
-      <button type="submit">Submit Maker</button>
-    </form>
+    <div>
+      <div className='subheader'>Add Maker</div>
+      <div className="form">
+        <form className="what" onSubmit={handleSubmit}>
+          <label className="nameField" htmlFor="name">Maker Name:</label>
+          <input className="input nameField" type="text" id="name" cols="30" onChange={handleChange} value={formState.name} />
+          <label className="locationField" htmlFor="location">Location:</label>
+          <input className="input locationField" type="text" id="location" cols="30" onChange={handleChange} value={formState.location} />
+          <label className="skillsField" htmlFor="skills">Skills:</label>
+          <input className="input skillsField" type="text" id="skills" cols="30" onChange={handleChange} value={formState.skills} />
+          <label className="phoneField" htmlFor="phone">Phone Number:</label>
+          <input className="input phoneField" type="text" id="phone" cols="30" onChange={handleChange} value={formState.phone} />
+          <label className="statusField" htmlFor="status">Status:</label>
+          <input className="input statusField" type="text" id="status" cols="30" onChange={handleChange} value={formState.status} />
+          <label className="summaryField" htmlFor="summary">Maker Summary</label>
+          <textarea className="input summaryField" id="summary" cols="30" rows="10" onChange={handleChange} value={formState.summary}></textarea>
+          <button className="submitbutton" type="submit">Submit Maker</button>
+        </form>
+      </div>
+    </div>
   )
 }
 

@@ -11,7 +11,9 @@ const Header = () => {
       <div className='title' >MEET YOUR MAKER </div>
 
       <div className="dropdown">
-        <div className="dropbtn">.<br></br>.<br></br>.</div>
+        <div className="dropbtn"><span class="material-symbols-outlined">
+          menu
+        </span></div>
         <div className="dropdown-content">
           <Link to="/">Home </Link>
           <Link to="/about">About </Link>
