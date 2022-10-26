@@ -2,25 +2,33 @@ import { useState, useEffect } from "react"
 // import maker from "../../../models/maker"
 import axios from "axios"
 import MakerDetails from "../Pages/MakerDetails"
+import Crafters from "../components/Crafters"
 import { Navigate, useNavigate } from "react-router-dom"
+// import { $where } from "../../../models/skills"
 
 const Home = () => {
 
   let navigate = useNavigate()
 
   const [makerList, setMakerList] = useState([])
+  const [skillGroup, setSkillGroup] = useState('')
 
   const getFeaturedMakers = async () => {
     const response = await axios.get(`http://localhost:3001/api`)
-    console.log(response.data.makers)
     setMakerList(response.data.makers.slice(0, 4))
-    console.log(makerList)
   }
 
   const getMakerDetails = async (arg) => {
 
     navigate(`/makers/${arg._id}`);
-    <MakerDetails />
+
+  }
+
+  const getCrafters = async (e) => {
+    setSkillGroup(e.target.innerText)
+    console.log(e.target.innerText)
+    navigate(`/makers/skills/${e.target.innerText.toLowerCase()}`);
+
 
   }
 
@@ -60,16 +68,20 @@ const Home = () => {
         <div className="subheader">Browse by Craft</div>
       </header>
       <div className="browse">
-        <div className="skill-tile">
+        <div className="skill-tile" onClick={getCrafters}>
           <div className="flex-top">
-            <h2>Construction<br></br>& Building</h2>
-            <h2>Audio/Video</h2>
-            <h2>Visual Art</h2>
+            <h2 id="construction">Construction</h2>
+            <h2 id="digitalmedia">Digital</h2>
+            <h2 id="music">Music</h2>
           </div>
-          <div className="flex-bottom">
-            <h2>Culinary</h2>
-            <h2>Mechanical</h2>
-            <h2>Textiles <br></br>& Fashion</h2>
+          <div className="flex-middle">
+            <h2 id="fineart">Art</h2>
+            <h2 id="culinary">Culinary</h2>
+            <h2 id="engineering">Engineering</h2>
+
+          </div>
+          <div className='flex-bottom'>
+            <h2 id="textiles">Textiles</h2>
           </div>
 
 

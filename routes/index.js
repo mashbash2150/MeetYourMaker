@@ -6,7 +6,7 @@ const router = Router();
 router.get('/', controllers.getFeaturedMakers)
 
 // app.get(`/makers`, makerController.getMakers)
-
+router.get(`/makers/skills/:skillgroup`, controllers.getAllByCraft)
 router.get(`/makers/:id`, controllers.getMakersById)
 router.get('/makers/update/:id', controllers.getMakerToUpdate)
 router.put('/makers/update/:id', controllers.updateMaker)
@@ -18,8 +18,10 @@ router.get("/makers/add", controllers.createMaker)
 router.post("/makers/add", controllers.createMaker)
 
 router.get("/makers",controllers.getMakers)
+router.get("/projects",controllers.getMakers)
 
 router.get(`/makers/:id`, controllers.getMakersById)
+
 
 
 

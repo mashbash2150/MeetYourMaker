@@ -6,6 +6,7 @@ import Home from "./Pages/Home"
 import About from "./Pages/About"
 import Add from "./Pages/Add"
 import MakerCard from "./components/MakerCard"
+import Crafters from "./components/Crafters"
 import Header from "./components/Header"
 import Search from "./Pages/Search"
 import Edit from "./Pages/Edit"
@@ -29,6 +30,7 @@ function App() {
         <Route path="/makers/:id" element={<MakerDetails/>}/>
         <Route path="/makers/update/:id" element={<Edit/>}/>
         <Route path="/search" element={<Search/>}/>
+        <Route path="/makers/skills/:skillgroup" element={<Crafters/>}/>
       </Routes>
     </main>
     </div>

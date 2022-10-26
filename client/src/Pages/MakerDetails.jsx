@@ -12,14 +12,15 @@ const MakerDetails = () => {
   let { id } = useParams()
   console.log(id)
   const [makerDetails, setMakerDetails] = useState('')
-  const [skills, setSkills] = useState('')
+  const [skills, setSkills] = useState([])
 
   const getMakerDetails = async (e) => {
     const response = await axios.get(`http://localhost:3001/api/makers/${id}`)
+    console.log(response.data.maker)
     setSkills(response.data.maker.skills)
 
     setMakerDetails(response.data.maker)
-    console.log(typeof (skills))
+    console.log(skills, typeof (skills))
   }
   useEffect(() => {
     getMakerDetails()
@@ -46,20 +47,20 @@ const MakerDetails = () => {
       <p><span className="icon2 material-symbols-outlined" onClick={deleteMaker}>
         delete
       </span></p>
-      <div className="makerDetails" ><span className="icon3 material-symbols-outlined">
+      <div className="makerDetails" ><span className="icon3 material-symbols-outlined" onClick={() => updateMaker(makerDetails._id)}>
         edit
       </span>
         <h1>{makerDetails.name}  <em>{makerDetails.status}</em> </h1>
-        <div className="icon3" onClick={() => updateMaker(makerDetails._id)}></div>
+
         <h2>{makerDetails.location}</h2>
         <h3>{makerDetails.phone}</h3>
-        {/* <ul className="skills-list">
-          {skills.toArray.map(skill => (
+
+        <h3>{makerDetails.summary}</h3>
+        <ul className="skills-list">
+          {skills?.map((skill) => (
             <li>{skill}</li>
           ))}
-
-        </ul> */}
-        <h3>{makerDetails.summary}</h3>
+        </ul>
       </div>
       <div className="image-gallery" >
         <img src={makerDetails.image} alt=''></img>

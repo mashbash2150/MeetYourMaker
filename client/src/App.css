@@ -123,6 +123,13 @@ body {
 
 }
 
+.flex-middle {
+  display: flex;
+  justify-content: space-around;
+  flex-basis: 25vw;
+
+}
+
 .skill-tile h2 {
   display: flex;
   background-color: rgba(145, 28, 28, 0.7);
@@ -183,14 +190,34 @@ body {
   opacity: 0.85;
 }
 
+.skills-list {
+  list-style: none;
+  text-align: center;
+}
+
+.option {
+  text-align: center;
+  padding: 10px;
+
+}
+
+.label {
+  padding: 20px 0 0 0;
+  font-size: 1.25em;
+}
+
+.required {
+  color: red
+}
+
 .dropbtn {
   background-color: rgb(242, 247, 248, 0);
   color: black;
-
-  font-size: 10px;
+  display: inherit;
   border: none;
   text-decoration: none;
-  margin: 50px 0 0 0;
+  grid-row-start: 1;
+  grid-column-start: 3;
 
 }
 
@@ -216,7 +243,7 @@ body {
   padding: 0.5em 0.3em;
   text-decoration: none;
   display: block;
-  font-size: 1.5em;
+  font-size: 0.5em;
 }
 
 .dropdown-content a:hover {
