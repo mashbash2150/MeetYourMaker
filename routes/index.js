@@ -8,7 +8,8 @@ router.get('/', controllers.getFeaturedMakers)
 // app.get(`/makers`, makerController.getMakers)
 
 router.get(`/makers/:id`, controllers.getMakersById)
-router.put('/makers/:id', controllers.updateMaker)
+router.get('/makers/update/:id', controllers.getMakerToUpdate)
+router.put('/makers/update/:id', controllers.updateMaker)
 
 router.delete('/makers/:id', controllers.deleteMaker)
 

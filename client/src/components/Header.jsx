@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <div className="header">
-      <div className='title' >
+      <div className='title' > LOGO WILL GO HERE
         <img src="/Users/madelineashley/GA_SEIR/Projects/MeetYourMaker/Images/Untitled (500 × 250 px).jpg" alt=""></img>
       </div>
 
@@ -22,6 +22,7 @@ const Header = () => {
           <Link to="/makers">All Makers </Link>
           <Link to="/search">Search </Link>
           <Link to="/makers/add">Add Maker </Link>
+
         </div>
       </div>
 

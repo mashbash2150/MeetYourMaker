@@ -1,37 +1,44 @@
 import { useState, useEffect } from 'react'
+import { useParams } from "react-router-dom"
 import axios from 'axios'
 
-const AddMaker = () => {
-  const [newMaker, setNewMaker] = useState([])
-  const initialState = {
-    name: '',
-    location: '',
-    summary: '',
+const UpdateMaker = ({ }) => {
+  let { id } = useParams()
+  console.log(id)
+  const [updateMaker, setUpdateMaker] = useState([])
+  const [makerDetails, setMakerDetails] = useState({})
+
+  const getMakerDetails = async (e) => {
+    const response = await axios.get(`http://localhost:3001/api/makers/update/${id}`)
+    setMakerDetails(response.data.maker)
+
+  }
+  let nametest = makerDetails.name
+  console.log(typeof (nametest))
+
+  let initialState = {
+    name: nametest,
+    location: makerDetails.location,
+    summary: makerDetails.summary,
     skills: [],
     phone: '',
     status: '',
     images: 'placeholder for image upload'
-  };
+  }
+
+  useEffect(() => {
+    getMakerDetails()
+  }, [])
+
+
   const [formState, setFormState] = useState(initialState)
 
 
-  useEffect(() => {
-    const getMakers = async () => {
-      try {
-        let response = await axios.get('http://localhost:3001/api/makers')
-        console.log(response.data.makers)
-        setNewMaker(response.data.makers)
-      } catch (err) {
-        console.log(err)
-      }
-    }
-    getMakers()
-  }, [])
+
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:3001/api/makers/add', formState)
-    setFormState(initialState)
+    axios.put(`http://localhost:3001/api/makers/update/${id}`, formState)
     document.querySelector(".hidden").style.opacity = 1.0
 
   }
@@ -61,9 +68,9 @@ const AddMaker = () => {
           <button className="submitbutton" type="submit">Submit Maker</button>
         </form>
       </div>
-      <div className="hidden">MAKER ADDED</div>
+      <div className="hidden">MAKER UPDATED</div>
     </div>
   )
 }
 
-export default AddMaker
+export default UpdateMaker

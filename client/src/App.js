@@ -8,6 +8,7 @@ import Add from "./Pages/Add"
 import MakerCard from "./components/MakerCard"
 import Header from "./components/Header"
 import Search from "./Pages/Search"
+import Edit from "./Pages/Edit"
 import { Route, Routes } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import MakerDetails from './Pages/MakerDetails';
@@ -26,6 +27,7 @@ function App() {
         <Route path="/makers" element={<MakerCard/>}/>
         <Route path="/makers/add" element={<Add/>}/>
         <Route path="/makers/:id" element={<MakerDetails/>}/>
+        <Route path="/makers/update/:id" element={<Edit/>}/>
         <Route path="/search" element={<Search/>}/>
       </Routes>
     </main>
