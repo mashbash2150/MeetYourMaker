@@ -39,17 +39,49 @@ const Home = () => {
   return (
     <div>
       <header>
+        <div className="subheader">Browse by Craft</div>
+      </header>
+      <div className="browse">
+        <div className="skill-tile" onClick={getCrafters}>
+          <div className="flex-top">
+            <h2 id="construction">Construction</h2>
+            <h2 id="digitalmedia">Digital</h2>
+            <h2 id="music">Music</h2>
+            <h2 id="fineart">Art</h2>
+          </div>
+          <div className="flex-middle">
+
+            <h2 id="culinary">Culinary</h2>
+            <h2 id="engineering">Engineering</h2>
+            <h2 id="textiles">Textiles</h2>
+            <h2 id="textiles">Nature</h2>
+
+          </div>
+          <div className='flex-bottom'>
+
+          </div>
+
+
+
+        </div>
+
+      </div>
+      <header>
         <div className="subheader">Featured Makers</div>
       </header>
       <div className="feature-container">
 
         {makerList.map((maker) => (
-          <div className="makerCard" key={maker._id} onClick={() => getMakerDetails(maker)}>
-            <div className="staticCardInfo">
+          <div className="featureCard" key={maker._id} onClick={() => getMakerDetails(maker)}>
+
+
+            <div className="staticFeatureInfo">
+              <div className="banner"><em>Featured!</em>
+
+              </div>
               <img src={maker.image} alt=""></img>
-              <h5><em>Featured!</em></h5>
-              <h2>{maker.name}</h2>
-              <h4><em>{maker.summary}</em></h4>
+              <div className="name">{maker.name}</div>
+              <div className="blurb"><em>{maker.summary}</em></div>
 
             </div>
             <div className="hide">
@@ -64,31 +96,7 @@ const Home = () => {
         ))}
 
       </div>
-      <header>
-        <div className="subheader">Browse by Craft</div>
-      </header>
-      <div className="browse">
-        <div className="skill-tile" onClick={getCrafters}>
-          <div className="flex-top">
-            <h2 id="construction">Construction</h2>
-            <h2 id="digitalmedia">Digital</h2>
-            <h2 id="music">Music</h2>
-          </div>
-          <div className="flex-middle">
-            <h2 id="fineart">Art</h2>
-            <h2 id="culinary">Culinary</h2>
-            <h2 id="engineering">Engineering</h2>
 
-          </div>
-          <div className='flex-bottom'>
-            <h2 id="textiles">Textiles</h2>
-          </div>
-
-
-
-        </div>
-
-      </div>
     </div>
   )
 }

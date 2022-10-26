@@ -42,8 +42,8 @@ const MakerCard = () => {
           </div>
           <div className="staticCardInfo">
             <img src={maker.image} alt=""></img>
-            <h1>{maker.name}  <em><span className="location">{maker.location}</span></em></h1>
-            <h4><em>{maker.summary}</em></h4>
+            <h2>{maker.name} <br></br> <em><span className="location">{maker.location}</span></em></h2>
+            <h3><em>{maker.summary}</em></h3>
             <h2 className="rating">Rating: {maker.rating}</h2>
           </div>
 
