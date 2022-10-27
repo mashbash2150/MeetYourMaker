@@ -8,11 +8,11 @@ const Header = () => {
 
   return (
     <div className="header">
-      <div className='title' >
-        <img src="https://github.com/mashbash2150/MeetYourMaker/blob/main/client/Images/mymlogo.png?raw=true" alt=''></img>
+
+      <div className='title title-text' >Meet Your Maker
+
       </div>
-
-
+      <img src="https://github.com/mashbash2150/MeetYourMaker/blob/main/client/Images/Meet%20Your%20Maker%20goldenrod.png?raw=true" alt=''></img>
       <div className="navbar"  >
         <Link to="/" style={{ textDecoration: 'none' }}>Home </Link>
         <Link to="/about" style={{ textDecoration: 'none' }}>About </Link>

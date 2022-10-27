@@ -73,13 +73,13 @@ const UpdateMaker = ({ }) => {
           <label className="label skillgroup" htmlFor="skillgroup">Skill Group:<span className="required">*</span></label>
           <select className="input" id="skillgroup" onChange={handleChange} value={formState.skillgroup}>
 
-            <option className="option" value="Construction & Building">Construction & Building</option>
-            <option className="option" value="Digital Media">Digital Media</option>
-            <option className="option" value="Music">Music</option>
-            <option className="option" value="Fine Art">Fine Art</option>
-            <option className="option" value="Culinary">Culinary</option>
-            <option className="option" value="Engineering & Mechanics">Engineering & Mechanics</option>
-            <option className="option" value="Textiles & Fashion">Textiles & Fashion</option>
+            <option className="option" value="construction">Construction & Building</option>
+            <option className="option" value="digital">Digital Media</option>
+            <option className="option" value="music">Music</option>
+            <option className="option" value="art">Fine Art</option>
+            <option className="option" value="culinary">Culinary</option>
+            <option className="option" value="engineering">Engineering & Mechanics</option>
+            <option className="option" value="textiles">Textiles & Fashion</option>
           </select>
           <label className="label skillsField" htmlFor="skills">Skills:</label>
           <input className="input skillsField" type="text" id="skills" cols="30" onChange={handleChange} value={formState.subskills} />

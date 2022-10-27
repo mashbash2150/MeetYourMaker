@@ -44,17 +44,17 @@ const Home = () => {
       <div className="browse">
         <div className="skill-tile" onClick={getCrafters}>
           <div className="flex-top">
-            <h2 id="construction">Construction</h2>
-            <h2 id="digitalmedia">Digital</h2>
-            <h2 id="music">Music</h2>
-            <h2 id="fineart">Art</h2>
+            <p id="construction">Construction</p>
+            <p id="digitalmedia">Digital</p>
+            <p id="music">Music</p>
+            <p id="fineart">Art</p>
           </div>
           <div className="flex-middle">
 
-            <h2 id="culinary">Culinary</h2>
-            <h2 id="engineering">Engineering</h2>
-            <h2 id="textiles">Textiles</h2>
-            <h2 id="textiles">Nature</h2>
+            <p id="culinary">Culinary</p>
+            <p id="engineering">Engineering</p>
+            <p id="textiles">Textiles</p>
+            <p id="textiles">Nature</p>
 
           </div>
           <div className='flex-bottom'>

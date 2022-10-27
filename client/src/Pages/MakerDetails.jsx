@@ -17,10 +17,10 @@ const MakerDetails = () => {
   const getMakerDetails = async (e) => {
     const response = await axios.get(`http://localhost:3001/api/makers/${id}`)
     console.log(response.data.maker)
-    setSkills(response.data.maker.skills)
+    setSkills(response.data.maker.subskills)
 
     setMakerDetails(response.data.maker)
-    console.log(skills, typeof (skills))
+
   }
   useEffect(() => {
     getMakerDetails()
@@ -44,27 +44,31 @@ const MakerDetails = () => {
 
   return (
     <div className="detailsbody">
-      <p><span className="icon2 material-symbols-outlined" onClick={deleteMaker}>
-        delete
-      </span></p>
-      <div className="makerDetails" ><span className="icon3 material-symbols-outlined" onClick={() => updateMaker(makerDetails._id)}>
-        edit
-      </span>
-        <h1>{makerDetails.name}  <em>{makerDetails.status}</em> </h1>
 
-        <h2>{makerDetails.location}</h2>
-        <h3>{makerDetails.phone}</h3>
+      <div className="makerDetails" >
+        <div><span className="details-header">{makerDetails.name}</span> - <em><span className="details-location">{makerDetails.location}</span></em></div>
+
+        <h2> <span className="status">{makerDetails.status}</span></h2>
 
         <h3>{makerDetails.summary}</h3>
-        <ul className="skills-list">
+        <div className="skills-list">
           {skills?.map((skill) => (
-            <li>{skill}</li>
-          ))}
-        </ul>
+            <h4>{skill}</h4>
+          ))}</div>
+        <div className="contact-details">Contact info:
+          <div>{makerDetails.email}</div>
+          <div>{makerDetails.phone}</div>
+        </div>
+
       </div>
-      <div className="image-gallery" >
+      <div className="details-image" >
         <img src={makerDetails.image} alt=''></img>
       </div>
+      <div><span className="icon material-symbols-outlined" onClick={() => updateMaker(makerDetails._id)}>
+        edit
+      </span> <span className="icon material-symbols-outlined" onClick={deleteMaker}>
+          delete
+        </span></div>
       <div className="hidden">DELETED</div>
     </div>
 
