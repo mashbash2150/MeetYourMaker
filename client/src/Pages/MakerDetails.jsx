@@ -8,6 +8,7 @@ import { Navigate, useNavigate } from "react-router-dom"
 const BASE_URL = "/api"
 
 const MakerDetails = () => {
+  console.log("banana")
   let navigate = useNavigate()
   let { id } = useParams()
   console.log(id)
@@ -38,7 +39,7 @@ const MakerDetails = () => {
 
   const updateMaker = (arg) => {
     console.log(makerDetails._id);
-    navigate(`${BASE_URL}/makers/update/${arg}`);
+    navigate(`/makers/update/${arg}`);
     <Edit id={makerDetails._id} />
   }
 

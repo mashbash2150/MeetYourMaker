@@ -20,8 +20,8 @@ const MakerCard = () => {
 
   const getMakerDetails = async (arg) => {
 
-    navigate(`${BASE_URL}/makers/${arg._id}`);
-    <MakerDetails />
+    navigate(`/makers/${arg._id}`);
+    // <MakerDetails />
 
   }
 
