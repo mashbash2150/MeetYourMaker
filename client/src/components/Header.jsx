@@ -8,8 +8,8 @@ const Header = () => {
 
   return (
     <div className="header">
-      <div className='title' > LOGO WILL GO HERE
-        <img src="client/Images/mymlogo.png" alt=''></img>
+      <div className='title' >
+        <img src="https://github.com/mashbash2150/MeetYourMaker/blob/main/client/Images/mymlogo.png?raw=true" alt=''></img>
       </div>
 
 
