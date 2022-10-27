@@ -14,7 +14,7 @@ const Home = () => {
   const [skillGroup, setSkillGroup] = useState('')
 
   const getFeaturedMakers = async () => {
-    const response = await axios.get(`/`)
+    const response = await axios.get(`/api/`)
     setMakerList(response.data.makers.slice(0, 4))
   }
 
@@ -27,7 +27,7 @@ const Home = () => {
   const getCrafters = async (e) => {
     setSkillGroup(e.target.innerText)
     console.log(e.target.innerText)
-    navigate(`/makers/skills/${e.target.innerText.toLowerCase()}`);
+    navigate(`/api/makers/skills/${e.target.innerText.toLowerCase()}`);
 
 
   }

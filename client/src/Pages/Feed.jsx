@@ -10,7 +10,7 @@ const Feed = () => {
 
   const getFeaturedMakers = async () => {
     // const response = await axios.get(`http://localhost:3001/api/makers`)
-    const response = await axios.get(`/makers`)
+    const response = await axios.get(`/api/makers`)
     console.log(response.data.makers)
     setMakerList(response.data.makers)
     console.log(makerList)
@@ -18,7 +18,7 @@ const Feed = () => {
 
   const getFeaturedProjects = async () => {
     // const response = await axios.get(`http://localhost:3001/api/makers`)
-    const response = await axios.get(`/makers`)
+    const response = await axios.get(`/api/makers`)
     console.log(response.data.makers)
     setMakerList(response.data.makers)
     console.log(makerList)

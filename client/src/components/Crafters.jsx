@@ -18,7 +18,7 @@ const Crafters = ({ text }) => {
 
   const getCrafters = async () => {
     console.log(skillgroup)
-    const response = await axios.get(`/makers/skills/${skillgroup}`)
+    const response = await axios.get(`/api/makers/skills/${skillgroup}`)
     // const response = await axios.get(`http://localhost:3001/api/makers/skills/${skillgroup}`)
     console.log(response)
     setCrafters(response.data.craft)

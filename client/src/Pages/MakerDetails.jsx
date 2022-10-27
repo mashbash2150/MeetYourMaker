@@ -15,7 +15,7 @@ const MakerDetails = () => {
   const [skills, setSkills] = useState([])
 
   const getMakerDetails = async (e) => {
-    const response = await axios.get(`/makers/${id}`)
+    const response = await axios.get(`/api/makers/${id}`)
     console.log(response.data.maker)
     setSkills(response.data.maker.subskills)
 
@@ -28,7 +28,7 @@ const MakerDetails = () => {
 
   const deleteMaker = async () => {
     alert("Are you sure you want to delete this entry?")
-    const response = await axios.delete(`/makers/${id}`)
+    const response = await axios.delete(`/api/makers/${id}`)
     setMakerDetails("")
     document.querySelector(".hidden").style.opacity = 1.0
     document.querySelector(".icon2").style.opacity = 0.0
@@ -38,7 +38,7 @@ const MakerDetails = () => {
 
   const updateMaker = (arg) => {
     console.log(makerDetails._id);
-    navigate(`/makers/update/${arg}`);
+    navigate(`/api/makers/update/${arg}`);
     <Edit id={makerDetails._id} />
   }
 

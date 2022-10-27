@@ -12,7 +12,7 @@ const MakerCard = () => {
   const [makerList, setMakerList] = useState([])
 
   const getAllMakers = async () => {
-    const response = await axios.get(`/makers`)
+    const response = await axios.get(`/api/makers`)
     console.log(response.data.makers)
     setMakerList(response.data.makers)
     console.log(makerList)
@@ -20,7 +20,7 @@ const MakerCard = () => {
 
   const getMakerDetails = async (arg) => {
 
-    navigate(`/makers/${arg._id}`);
+    navigate(`/api/makers/${arg._id}`);
     <MakerDetails />
 
   }
