@@ -61,14 +61,15 @@ const MakerDetails = () => {
         </div>
 
       </div>
-      <div className="details-image" >
-        <img src={makerDetails.image} alt=''></img>
-      </div>
       <div><span className="icon material-symbols-outlined" onClick={() => updateMaker(makerDetails._id)}>
         edit
       </span> <span className="icon material-symbols-outlined" onClick={deleteMaker}>
           delete
         </span></div>
+      <div className="details-image" >
+        <img src={makerDetails.image} alt=''></img>
+      </div>
+
       <div className="hidden">DELETED</div>
     </div>
 
