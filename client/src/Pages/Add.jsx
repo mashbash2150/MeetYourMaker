@@ -72,6 +72,8 @@ const AddMaker = () => {
 
           <label className="label phoneField" htmlFor="phone">Phone Number:</label>
           <input className="input phoneField" type="tel" id="phone" cols="30" onChange={handleChange} value={formState.phone} />
+          <label className="label imageField" htmlFor="imageurl">Image URL:</label>
+          <input className="input imageField" type="text" id="image" cols="30" onChange={handleChange} value={formState.image} />
           <label className="label statusField" htmlFor="status">Status:</label>
           <input className="input statusField" type="text" id="status" cols="30" onChange={handleChange} value={formState.status} />
           <label className="label summaryField" htmlFor="summary">Maker Summary</label>

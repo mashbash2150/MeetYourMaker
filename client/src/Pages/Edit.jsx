@@ -51,7 +51,7 @@ const UpdateMaker = ({ }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.put(`/makers/update/${id}`, formState)
+    axios.put(`${BASE_URL}/makers/update/${id}`, formState)
     document.querySelector(".hidden").style.opacity = 1.0
 
   }

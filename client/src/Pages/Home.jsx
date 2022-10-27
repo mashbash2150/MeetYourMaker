@@ -21,7 +21,7 @@ const Home = () => {
 
   const getMakerDetails = async (arg) => {
 
-    navigate(`/makers/${arg._id}`);
+    navigate(`${BASE_URL}/makers/${arg._id}`);
 
   }
 
