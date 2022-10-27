@@ -15,13 +15,13 @@ const Home = () => {
   const [skillGroup, setSkillGroup] = useState('')
 
   const getFeaturedMakers = async () => {
-    const response = await axios.get(`/`)
+    const response = await axios.get('/')
     setMakerList(response.data.makers.slice(0, 4))
   }
 
   const getMakerDetails = async (arg) => {
 
-    navigate(`${BASE_URL}/makers/${arg._id}`);
+    navigate(`/makers/${arg._id}`);
 
   }
 
