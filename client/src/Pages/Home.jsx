@@ -5,6 +5,7 @@ import MakerDetails from "../Pages/MakerDetails"
 import Crafters from "../components/Crafters"
 import { Navigate, useNavigate } from "react-router-dom"
 // import { $where } from "../../../models/skills"
+const BASE_URL = "/api"
 
 const Home = () => {
 
@@ -14,20 +15,20 @@ const Home = () => {
   const [skillGroup, setSkillGroup] = useState('')
 
   const getFeaturedMakers = async () => {
-    const response = await axios.get(`/api/`)
+    const response = await axios.get(`${BASE_URL}`)
     setMakerList(response.data.makers.slice(0, 4))
   }
 
   const getMakerDetails = async (arg) => {
 
-    navigate(`/makers/${arg._id}`);
+    navigate(`${BASE_URL}/makers/${arg._id}`);
 
   }
 
   const getCrafters = async (e) => {
     setSkillGroup(e.target.innerText)
     console.log(e.target.innerText)
-    navigate(`/api/makers/skills/${e.target.innerText.toLowerCase()}`);
+    navigate(`${BASE_URL}/makers/skills/${e.target.innerText.toLowerCase()}`);
 
 
   }

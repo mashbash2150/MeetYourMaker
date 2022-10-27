@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { useParams } from "react-router-dom"
 import axios from 'axios'
 
+const BASE_URL = "/api"
+
 const UpdateMaker = ({ }) => {
   let { id } = useParams()
   console.log(id)
@@ -10,7 +12,7 @@ const UpdateMaker = ({ }) => {
   const [formState, setFormState] = useState({})
 
   const getMakerDetails = async (e) => {
-    const response = await axios.get(`/api/makers/update/${id}`)
+    const response = await axios.get(`${BASE_URL}/makers/update/${id}`)
     setMakerDetails(response.data.maker)
     setFormState({
       name: response.data.maker.name,

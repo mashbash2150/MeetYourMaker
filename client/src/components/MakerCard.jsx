@@ -4,7 +4,7 @@ import axios from "axios"
 import MakerDetails from "../Pages/MakerDetails"
 import { Navigate, useNavigate } from "react-router-dom"
 
-
+const BASE_URL = "/api"
 
 const MakerCard = () => {
   let navigate = useNavigate()
@@ -20,7 +20,7 @@ const MakerCard = () => {
 
   const getMakerDetails = async (arg) => {
 
-    navigate(`/api/makers/${arg._id}`);
+    navigate(`${BASE_URL}/makers/${arg._id}`);
     <MakerDetails />
 
   }

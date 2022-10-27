@@ -5,7 +5,7 @@ import axios from "axios"
 import Edit from "./Edit"
 import { Navigate, useNavigate } from "react-router-dom"
 
-
+const BASE_URL = "/api"
 
 const MakerDetails = () => {
   let navigate = useNavigate()
@@ -15,7 +15,7 @@ const MakerDetails = () => {
   const [skills, setSkills] = useState([])
 
   const getMakerDetails = async (e) => {
-    const response = await axios.get(`/api/makers/${id}`)
+    const response = await axios.get(`${BASE_URL}/makers/${id}`)
     console.log(response.data.maker)
     setSkills(response.data.maker.subskills)
 
@@ -28,7 +28,7 @@ const MakerDetails = () => {
 
   const deleteMaker = async () => {
     alert("Are you sure you want to delete this entry?")
-    const response = await axios.delete(`/api/makers/${id}`)
+    const response = await axios.delete(`${BASE_URL}/makers/${id}`)
     setMakerDetails("")
     document.querySelector(".hidden").style.opacity = 1.0
     document.querySelector(".icon2").style.opacity = 0.0
@@ -38,7 +38,7 @@ const MakerDetails = () => {
 
   const updateMaker = (arg) => {
     console.log(makerDetails._id);
-    navigate(`/api/makers/update/${arg}`);
+    navigate(`${BASE_URL}/makers/update/${arg}`);
     <Edit id={makerDetails._id} />
   }
 

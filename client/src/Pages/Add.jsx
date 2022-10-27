@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
+const BASE_URL = "/api"
+
 const AddMaker = () => {
   const [newMaker, setNewMaker] = useState([])
   const initialState = {
@@ -19,7 +21,7 @@ const AddMaker = () => {
     const getMakers = async () => {
       try {
         // let response = await axios.get('http://localhost:3001/api/makers')
-        let response = await axios.get(`/api/makers`)
+        let response = await axios.get(`${BASE_URL}/makers`)
         console.log(response.data.makers)
         setNewMaker(response.data.makers)
       } catch (err) {
@@ -31,7 +33,7 @@ const AddMaker = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.post(`/api/makers/add`, formState)
+    axios.post(`${BASE_URL}/makers/add`, formState)
     setFormState(initialState)
     document.querySelector(".hidden").style.opacity = 1.0
 
