@@ -14,7 +14,7 @@ const Home = () => {
   const [skillGroup, setSkillGroup] = useState('')
 
   const getFeaturedMakers = async () => {
-    const response = await axios.get(`http://localhost:3001/api`)
+    const response = await axios.get(`${process.env.REACT_APP_BASE_URL}`)
     setMakerList(response.data.makers.slice(0, 4))
   }
 

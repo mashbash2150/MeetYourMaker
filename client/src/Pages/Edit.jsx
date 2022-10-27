@@ -10,7 +10,7 @@ const UpdateMaker = ({ }) => {
   const [formState, setFormState] = useState({})
 
   const getMakerDetails = async (e) => {
-    const response = await axios.get(`http://localhost:3001/api/makers/update/${id}`)
+    const response = await axios.get(`${process.env.REACT_APP_BASE_URL}makers/update/${id}`)
     setMakerDetails(response.data.maker)
     setFormState({
       name: response.data.maker.name,
