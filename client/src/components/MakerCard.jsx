@@ -21,7 +21,7 @@ const MakerCard = () => {
   const getMakerDetails = async (arg) => {
 
     navigate(`/makers/${arg._id}`);
-    // <MakerDetails />
+
 
   }
 

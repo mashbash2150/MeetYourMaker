@@ -24,19 +24,10 @@ const Crafters = ({ text }) => {
     setCrafters(response.data.craft)
   }
 
-  // const getCrafterDetails = async (arg) => {
-
-  //   navigate(`/makers/${arg._id}`);
-  //   <MakerDetails />
-
-  // }
-
   useEffect(() => {
     getCrafters()
   }, [])
 
-
-  // onClick={() => getCrafterDetails(crafter._id)
   return (
     <div className="container">
 

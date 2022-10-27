@@ -12,7 +12,7 @@ const AddMaker = () => {
     skills: [],
     phone: '',
     status: '',
-    images: 'placeholder for image upload'
+    images: ''
   };
   const [formState, setFormState] = useState(initialState)
 
@@ -51,7 +51,7 @@ const AddMaker = () => {
       <div className="form">
         <form className="what" onSubmit={handleSubmit}>
           <label className="label nameField" htmlFor="name">Maker Name: <span className="required">*</span></label>
-          <input className="input nameField" type="text" id="name" cols="30" onChange={handleChange} value={formState.name} />
+          <input className="input" type="text" id="name" cols="30" onChange={handleChange} />
           <label className="label locationField" htmlFor="location">Location:<span className="required">*</span></label>
           <input className="input locationField" type="text" id="location" cols="30" onChange={handleChange} value={formState.location} />
           <label className="label emailField" htmlFor="email">Email Address:<span className="required">*</span></label>
