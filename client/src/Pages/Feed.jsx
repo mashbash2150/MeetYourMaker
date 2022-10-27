@@ -9,14 +9,16 @@ const Feed = () => {
   const [projectList, setProjectList] = useState([])
 
   const getFeaturedMakers = async () => {
-    const response = await axios.get(`http://localhost:3001/api/makers`)
+    // const response = await axios.get(`http://localhost:3001/api/makers`)
+    const response = await axios.get(`/makers`)
     console.log(response.data.makers)
     setMakerList(response.data.makers)
     console.log(makerList)
   }
 
   const getFeaturedProjects = async () => {
-    const response = await axios.get(`http://localhost:3001/api/makers`)
+    // const response = await axios.get(`http://localhost:3001/api/makers`)
+    const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/makers`)
     console.log(response.data.makers)
     setMakerList(response.data.makers)
     console.log(makerList)
