@@ -12,7 +12,7 @@ const MakerCard = () => {
   const [makerList, setMakerList] = useState([])
 
   const getAllMakers = async () => {
-    const response = await axios.get(`${process.env.REACT_APP_BASE_URL}makers`)
+    const response = await axios.get(`/makers`)
     console.log(response.data.makers)
     setMakerList(response.data.makers)
     console.log(makerList)

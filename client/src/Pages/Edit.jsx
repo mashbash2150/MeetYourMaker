@@ -10,7 +10,7 @@ const UpdateMaker = ({ }) => {
   const [formState, setFormState] = useState({})
 
   const getMakerDetails = async (e) => {
-    const response = await axios.get(`${process.env.REACT_APP_BASE_URL}makers/update/${id}`)
+    const response = await axios.get(`/makers/update/${id}`)
     setMakerDetails(response.data.maker)
     setFormState({
       name: response.data.maker.name,
@@ -49,7 +49,7 @@ const UpdateMaker = ({ }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.put(`http://localhost:3001/api/makers/update/${id}`, formState)
+    axios.put(`/makers/update/${id}`, formState)
     document.querySelector(".hidden").style.opacity = 1.0
 
   }
