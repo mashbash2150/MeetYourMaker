@@ -19,7 +19,7 @@ const Crafters = ({ text }) => {
 
   const getDescription = async () => {
     console.log(skillgroup)
-    const response = await axios.get(`http://localhost:3001/api/skills/${skillgroup}`)
+    const response = await axios.get(`${BASE_URL}/skills/${skillgroup}`)
     // const response = await axios.get(`http://localhost:3001/api/makers/skills/${skillgroup}`)
     console.log(response.data.skill)
     setSkillDetails(response.data.skill[0])
@@ -28,7 +28,7 @@ const Crafters = ({ text }) => {
 
   const getCrafters = async () => {
     console.log(skillgroup)
-    const response = await axios.get(`http://localhost:3001/api/makers/skills/${skillgroup}`)
+    const response = await axios.get(`${BASE_URL}/makers/skills/${skillgroup}`)
     // const response = await axios.get(`http://localhost:3001/api/makers/skills/${skillgroup}`)
     console.log(response)
     setCrafters(response.data.craft)
@@ -47,14 +47,20 @@ const Crafters = ({ text }) => {
   } else {
     return (
 
-      <div>
-        <div>{skillDetails.skillgroup} </div>
+      <div className="description-container">
+        <div className="description-title">{skillDetails.skillgroup} </div>
+        <div className="description-blurb"><em>Makers in this category generally specialize in:</em></div>
         {skillDetails.subskills?.map((skill) => (
           <div>
-            <div>{skill}</div>
+            <div className="description-list" key={skill._id} >{skill}</div>
           </div>
         ))}
-
+        <div className="description-blurb">And may work with the following media: </div>
+        {skillDetails.media?.map((media) => (
+          <div>
+            <div className="description-list" key={media._id} >{media}</div>
+          </div>
+        ))}
         <div className="craftercontainer">
 
           {crafters?.map((crafter) => (

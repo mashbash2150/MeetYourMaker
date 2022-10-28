@@ -100,16 +100,21 @@ const getMakerToUpdate= async (req,res)=>{
 }
 }
 
-const search=(req,res)=>{
-  res.send({
-    message: `Search Page Here`   
-  })
-}
-
-const searchResult=(req,res)=>{
+const search=async (req,res)=>{
   res.send({
     message: `Search Results Here`   
   })
+}
+
+
+const searchResult=async(req,res)=>{
+  try {
+    const { query } = req.params;
+    const makers = await Maker.find({city:query})
+    return res.status(200).json({ makers })
+} catch (error) {
+    return res.status(500).send(error.message);
+}
 }
 
 const about=(req,res)=>{

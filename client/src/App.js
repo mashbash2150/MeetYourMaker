@@ -31,6 +31,7 @@ function App() {
         <Route path="/makers/update/:id" element={<Edit/>}/>
         <Route path="/search" element={<Search/>}/>
         <Route path="/makers/skills/:skillgroup" element={<Crafters/>}/>
+        
       </Routes>
     </main>
     </div>

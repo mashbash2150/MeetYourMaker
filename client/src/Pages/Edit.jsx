@@ -16,7 +16,8 @@ const UpdateMaker = ({ }) => {
     setMakerDetails(response.data.maker)
     setFormState({
       name: response.data.maker.name,
-      location: response.data.maker.location,
+      city: response.data.maker.city,
+      state: response.data.maker.state,
       email: response.data.maker.email,
       skillgroup: response.data.maker.skillgroup,
       subskills: response.data.maker.subskills,
@@ -50,7 +51,7 @@ const UpdateMaker = ({ }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.put(`http://localhost:3001/api/makers/update/${id}`, formState)
+    axios.put(`${BASE_URL}/makers/update/${id}`, formState)
     document.querySelector(".hidden").style.opacity = 1.0
 
   }
@@ -67,8 +68,10 @@ const UpdateMaker = ({ }) => {
         <form className="what" onSubmit={handleSubmit}>
           <label className="label nameField" htmlFor="name">Maker Name: <span className="required">*</span></label>
           <input className="input nameField" type="text" id="name" cols="30" onChange={handleChange} value={formState.name} />
-          <label className="label locationField" htmlFor="location">Location:<span className="required">*</span></label>
-          <input className="input locationField" type="text" id="location" cols="30" onChange={handleChange} value={formState.location} />
+          <label className="label cityField" htmlFor="city">City:<span className="required">*</span></label>
+          <input className="input cityField" type="text" id="city" cols="30" onChange={handleChange} value={formState.city} />
+          <label className="label stateField" htmlFor="state">State:<span className="required">*</span></label>
+          <input className="input stateField" type="text" id="state" cols="30" onChange={handleChange} value={formState.state} />
           <label className="label emailField" htmlFor="email">Email Address:<span className="required">*</span></label>
           <input className="input emailField" type="email" id="email" cols="30" onChange={handleChange} value={formState.email} />
           <label className="label skillgroup" htmlFor="skillgroup">Skill Group:<span className="required">*</span></label>

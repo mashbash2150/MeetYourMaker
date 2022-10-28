@@ -58,3 +58,15 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_display_element_ho
 https://www.w3schools.com/howto/howto_css_dropdown.asp
 
 https://www.pngdownload.id/png-8o8h8v/
+
+https://www.w3schools.com/Css/css_link.asp
+
+https://www.w3schools.com/cssref/css3_pr_text-shadow.php
+
+https://css-tricks.com/snippets/html/mailto-links/
+
+https://stackoverflow.com/questions/33851508/why-doesnt-my-react-js-form-accept-user-input
+
+https://fonts.google.com/icons?icon.query=mail&icon.platform=web
+
+https://www.w3schools.com/css/css_form.asp

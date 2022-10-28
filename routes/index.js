@@ -29,7 +29,7 @@ router.get(`/makers/:id`, controllers.getMakersById)
 
 router.get('/search',controllers.search)
 
-// router.get('/search/:makerId',controllers.searchResult)
+router.get('/search/:query',controllers.searchResult)
 
 router.get('/about',controllers.about)
 

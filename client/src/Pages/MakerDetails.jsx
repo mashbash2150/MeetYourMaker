@@ -8,7 +8,7 @@ import { Navigate, useNavigate } from "react-router-dom"
 const BASE_URL = "/api"
 
 const MakerDetails = () => {
-  console.log("banana")
+
   let navigate = useNavigate()
   let { id } = useParams()
   console.log(id)
@@ -16,7 +16,7 @@ const MakerDetails = () => {
   const [skills, setSkills] = useState([])
 
   const getMakerDetails = async (e) => {
-    const response = await axios.get(`http://localhost:3001/api/makers/${id}`)
+    const response = await axios.get(`${BASE_URL}/makers/${id}`)
     console.log(response.data.maker)
     setSkills(response.data.maker.subskills)
 
@@ -29,11 +29,14 @@ const MakerDetails = () => {
 
   const deleteMaker = async () => {
     alert("Are you sure you want to delete this entry?")
-    const response = await axios.delete(`http://localhost:3001/api/makers/${id}`)
+    const response = await axios.delete(`${BASE_URL}/makers/${id}`)
     setMakerDetails("")
     document.querySelector(".hidden").style.opacity = 1.0
     document.querySelector(".icon2").style.opacity = 0.0
     document.querySelector(".icon3").style.opacity = 0.0
+
+
+
 
   }
 
@@ -47,7 +50,7 @@ const MakerDetails = () => {
     <div className="detailsbody">
 
       <div className="makerDetails" >
-        <div><span className="details-header">{makerDetails.name}</span> - <em><span className="details-location">{makerDetails.location}</span></em></div>
+        <div><span className="details-header">{makerDetails.name}</span> - <em><span className="details-location">{makerDetails.city}, {makerDetails.state}</span></em></div>
 
         <h2> <span className="status">{makerDetails.status}</span></h2>
 
@@ -57,7 +60,10 @@ const MakerDetails = () => {
             <h4>{skill}</h4>
           ))}</div>
         <div className="contact-details">Contact info:
-          <div>{makerDetails.email}</div>
+          <div>{makerDetails.email}
+            <a href="mailto:someone@yoursite.com" > <span className="icon material-symbols-outlined">
+              mail
+            </span></a>  </div>
           <div>{makerDetails.phone}</div>
         </div>
 

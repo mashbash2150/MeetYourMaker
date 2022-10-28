@@ -6,7 +6,8 @@ const Schema = mongoose.Schema
 const Maker = new Schema(
     {
         name: { type: String, required: true },
-        location: { type: String, required: true },
+        city: { type: String, required: true },
+        state: { type: String, required: true },
         summary: { type: String, required: false },
         skillgroup: { type: String, required: true },
         subskills:{type:Array,required:false},
