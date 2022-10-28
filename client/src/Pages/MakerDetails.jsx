@@ -31,7 +31,7 @@ const MakerDetails = () => {
     alert("Are you sure you want to delete this entry?")
     const response = await axios.delete(`${BASE_URL}/makers/${id}`)
     setMakerDetails("")
-    document.querySelector(".hidden").style.opacity = 1.0
+    document.querySelector(".deleted").style.opacity = 1.0
     document.querySelector(".icon2").style.opacity = 0.0
     document.querySelector(".icon3").style.opacity = 0.0
 
@@ -77,7 +77,7 @@ const MakerDetails = () => {
         <img src={makerDetails.image} alt=''></img>
       </div>
 
-      <div className="hidden">DELETED</div>
+      <div className=".deleted">DELETED</div>
     </div>
 
   )

@@ -88,7 +88,7 @@ const AddMaker = () => {
 
           <label className="label skillsField" htmlFor="subskills">Skills:</label>
           <input className="input skillsField" type="text" id="subskills" cols="30" onChange={handleChange} value={formState.subskills} />
-          <button className="submitbutton" type="submit">Submit Maker</button>
+          <button className="input submitbutton" type="submit">Submit Maker</button>
 
           <div>
 
