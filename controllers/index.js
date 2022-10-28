@@ -1,7 +1,7 @@
 const { response } = require("express");
 const Maker = require('../models/maker');
 const Project = require('../models/project');
-const Craft=require('../models/skills')
+const Skill=require('../models/skills')
 
 const createMaker = async (req, res) => {
   try {
@@ -44,6 +44,20 @@ const getMakersById= async (req,res)=>{
         return res.status(200).json({ maker});
     }
     return res.status(404).send('Maker with the specified ID does not exist');
+} catch (error) {
+    return res.status(500).send(error.message);
+}
+}
+
+const getSkill= async (req,res)=>{
+  try {
+    const { skillgroup } = req.params;
+    console.log(req.params)
+    const skill = await Skill.find(skillgroup)
+    if (skill) {
+        return res.status(200).json({ skill});
+    }
+    return res.status(404).send('skill with the specified ID does not exist');
 } catch (error) {
     return res.status(500).send(error.message);
 }
@@ -130,5 +144,6 @@ module.exports={
   updateMaker,
   deleteMaker,
   getMakerToUpdate,
-  getAllByCraft
+  getAllByCraft,
+  getSkill
 }

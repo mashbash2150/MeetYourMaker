@@ -18,7 +18,7 @@ const Crafters = ({ text }) => {
 
   const getCrafters = async () => {
     console.log(skillgroup)
-    const response = await axios.get(`${BASE_URL}/makers/skills/${skillgroup}`)
+    const response = await axios.get(`http://localhost:3001/api/makers/skills/${skillgroup}`)
     // const response = await axios.get(`http://localhost:3001/api/makers/skills/${skillgroup}`)
     console.log(response)
     setCrafters(response.data.craft)
@@ -28,30 +28,34 @@ const Crafters = ({ text }) => {
     getCrafters()
   }, [])
 
-  return (
-    <div className="container">
+  if (crafters.length === 0) {
+    return (<h1 className="noresults">NO MAKERS OF THIS SPECIALTY YET <br></br>COULD YOU BE THE NEXT?</h1>)
+  } else {
+    return (
+      <div className="craftercontainer">
 
-      {crafters?.map((crafter) => (
-        <div className="crafterCard" key={crafter._id} >
-          <div className="hide">
-            <h4>Location: </h4>
-            <h4>Skills: {crafter.skills}</h4>
-            <h4>Status: {crafter.status}</h4>
-            <h4>Contact: {crafter.phone}</h4>
+        {crafters?.map((crafter) => (
+          <div className="crafterCard" key={crafter._id} >
+            <div className="hide">
+              <h4>Location: </h4>
+              <h4>Skills: {crafter.skills}</h4>
+              <h4>Status: {crafter.status}</h4>
+              <h4>Contact: {crafter.phone}</h4>
+            </div>
+            <div className="staticCardInfo">
+              <img src={crafter.image} alt=""></img>
+              <h2>{crafter.name}  <em><span className="location">{crafter.location}</span></em></h2>
+              <h3><em>{crafter.summary}</em></h3>
+              <h3 className="rating">Rating: {crafter.rating}</h3>
+            </div>
+
           </div>
-          <div className="staticCardInfo">
-            <img src={crafter.image} alt=""></img>
-            <h1>{crafter.name}  <em><span className="location">{crafter.location}</span></em></h1>
-            <h4><em>{crafter.summary}</em></h4>
-            <h2 className="rating">Rating: {crafter.rating}</h2>
-          </div>
+        ))}
 
-        </div>
-      ))}
+      </div>
 
-    </div>
-
-  )
+    )
+  }
 }
 
 

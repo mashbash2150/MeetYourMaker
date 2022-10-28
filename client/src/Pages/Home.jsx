@@ -15,20 +15,20 @@ const Home = () => {
   const [skillGroup, setSkillGroup] = useState('')
 
   const getFeaturedMakers = async () => {
-    const response = await axios.get('/')
+    const response = await axios.get('api/')
     setMakerList(response.data.makers.slice(0, 4))
   }
 
   const getMakerDetails = async (arg) => {
 
-    navigate(`${BASE_URL}/makers/${arg._id}`);
+    navigate(`/makers/${arg._id}`);
 
   }
 
   const getCrafters = async (e) => {
     setSkillGroup(e.target.innerText)
     console.log(e.target.innerText)
-    navigate(`${BASE_URL}/makers/skills/${e.target.innerText.toLowerCase()}`);
+    navigate(`/makers/skills/${e.target.innerText.toLowerCase()}`);
 
 
   }
@@ -43,19 +43,19 @@ const Home = () => {
         <div className="subheader">Browse by Craft</div>
       </header>
       <div className="browse">
-        <div className="skill-tile" onClick={getCrafters}>
+        <div className="skill-tile " onClick={getCrafters}>
           <div className="flex-top">
-            <p id="construction">Construction</p>
-            <p id="digitalmedia">Digital</p>
-            <p id="music">Music</p>
-            <p id="fineart">Art</p>
+            <p className="zoom" id="construction">Construction</p>
+            <p className="zoom" id="digitalmedia">Digital</p>
+            <p className="zoom" id="music">Music</p>
+            <p className="zoom" id="fineart">Art</p>
           </div>
           <div className="flex-middle">
 
-            <p id="culinary">Culinary</p>
-            <p id="engineering">Engineering</p>
-            <p id="textiles">Textiles</p>
-            <p id="textiles">Nature</p>
+            <p className="zoom" id="culinary">Culinary</p>
+            <p className="zoom" id="engineering">Engineering</p>
+            <p className="zoom" id="textiles">Textiles</p>
+            <p className="zoom" id="textiles">Nature</p>
 
           </div>
           <div className='flex-bottom'>
@@ -68,7 +68,7 @@ const Home = () => {
 
       </div>
       <header>
-        <div className="subheader">Featured Makers</div>
+        <div className="subheader feature">Featured Makers</div>
       </header>
       <div className="feature-container">
 

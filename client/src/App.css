@@ -28,7 +28,26 @@ body {
 
 }
 
+.craftercontainer {
+  display: flex;
+  justify-content: space-evenly;
+}
 
+.crafterCard {
+  display: grid;
+  width: 28vw;
+  background-color: rgba(207, 154, 21, 0.7);
+  min-height: 35vh;
+  margin: 0;
+  border-radius: 20px;
+
+  padding: 1.5vw;
+}
+
+.noresults {
+  text-align: center;
+  opacity: 0.7
+}
 
 .nav {
   background-color: #212121;
@@ -52,7 +71,7 @@ body {
 .details-image img {
   border-radius: 10%;
   z-index: 5%;
-  width: 100%;
+  width: 50vw;
   height: auto;
   object-fit: cover;
 }
@@ -110,7 +129,22 @@ body {
   align-self: center;
   z-index: -1;
   margin: 3vh 0 0vh 3vw;
+  text-shadow: 0 0 10px #b1a008;
 
+}
+
+.zoom {
+
+
+  transition: transform .2s;
+  /* Animation */
+
+
+}
+
+.zoom:hover {
+  transform: scale(1.15);
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 
@@ -190,7 +224,7 @@ body {
 
 .skill-tile p {
   display: flex;
-  background-color: rgba(236, 233, 233, 0.633);
+  background-color: rgba(149, 150, 153, 0.633);
   color: rgba(0, 0, 0, 0.6);
   width: 13vw;
   height: 13vw;
@@ -201,6 +235,7 @@ body {
   font-size: 3vh;
   box-shadow: 5px 5px 8px #888888;
   opacity: 0.75;
+  text-shadow: 0 0 2px #b1a008;
 }
 
 
@@ -227,19 +262,17 @@ body {
 .navbar {
   grid-row: 1/3;
   grid-column: 4/5;
-  color: rgb(4, 0, 0);
+  opacity: 0.7;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: right;
-  justify-items: right;
   align-items: flex-end;
   font-size: 2.5vw;
   z-index: 25;
   text-align: right;
-
-  padding: 9vh 2vw 0 0;
+  padding: 6vh 2vw 0 0;
   line-height: 4vh;
+
 
 }
 
@@ -382,10 +415,11 @@ body {
   text-align: center;
   font-size: 2.5vw;
   background: rgb(183, 182, 182);
-  margin: 0px 0 10px 0;
+  margin: -3vh 0 4vh 0;
   padding: 10px;
   color: rgba(0, 0, 0, 1);
   font-family: 'Tomorrow', sans-serif;
+
 }
 
 Link {
@@ -414,4 +448,12 @@ form {
   opacity: 0.0;
   text-align: center;
 
+}
+
+.browse {
+  margin: -5vh 0 0 0;
+}
+
+.feature {
+  margin: 0vh 0 2.5vh 0;
 }

@@ -12,7 +12,7 @@ const UpdateMaker = ({ }) => {
   const [formState, setFormState] = useState({})
 
   const getMakerDetails = async (e) => {
-    const response = await axios.get(`${BASE_URL}/makers/update/${id}`)
+    const response = await axios.get(`http://localhost:3001/api/makers/update/${id}`)
     setMakerDetails(response.data.maker)
     setFormState({
       name: response.data.maker.name,
@@ -22,22 +22,21 @@ const UpdateMaker = ({ }) => {
       subskills: response.data.maker.subskills,
       phone: response.data.maker.phone,
       status: response.data.maker.status,
-      images: response.data.maker.image,
+      image: response.data.maker.image,
     })
 
   }
-  let nametest = makerDetails.name
-  console.log(nametest)
+  // let nametest = makerDetails.name
 
-  let initialState = {
-    name: nametest,
-    location: makerDetails.location,
-    summary: makerDetails.summary,
-    skills: [],
-    phone: '',
-    status: '',
-    images: 'placeholder for image upload'
-  }
+  // let initialState = {
+  //   name: nametest,
+  //   location: makerDetails.location,
+  //   summary: makerDetails.summary,
+  //   skills: [],
+  //   phone: '',
+  //   status: '',
+  //   images: 'placeholder for image upload'
+  // }
 
   useEffect(() => {
     getMakerDetails()
@@ -51,7 +50,7 @@ const UpdateMaker = ({ }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.put(`${BASE_URL}/makers/update/${id}`, formState)
+    axios.put(`http://localhost:3001/api/makers/update/${id}`, formState)
     document.querySelector(".hidden").style.opacity = 1.0
 
   }

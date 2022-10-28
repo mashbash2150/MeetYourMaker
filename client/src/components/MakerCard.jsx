@@ -12,7 +12,7 @@ const MakerCard = () => {
   const [makerList, setMakerList] = useState([])
 
   const getAllMakers = async () => {
-    const response = await axios.get(`${BASE_URL}/makers`)
+    const response = await axios.get(`http://localhost:3001/api/makers`)
     console.log(response.data.makers)
     setMakerList(response.data.makers)
     console.log(makerList)
@@ -33,7 +33,7 @@ const MakerCard = () => {
     <div className="container">
 
       {makerList.map((maker) => (
-        <div className="makerCard" key={maker._id} onClick={() => getMakerDetails(maker)}>
+        <div className="zoom makerCard" key={maker._id} onClick={() => getMakerDetails(maker)}>
           <div className="hide">
             <h4>Location: </h4>
             <h4>Skills: {maker.skills}</h4>
@@ -44,7 +44,7 @@ const MakerCard = () => {
             <img src={maker.image} alt=""></img>
             <h2>{maker.name} <br></br> <em><span className="location">{maker.location}</span></em></h2>
             <h3><em>{maker.summary}</em></h3>
-            <h2 className="rating">Rating: {maker.rating}</h2>
+            <h3 className="rating">Rating: {maker.rating}</h3>
           </div>
 
         </div>

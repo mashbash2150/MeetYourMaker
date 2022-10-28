@@ -6,6 +6,7 @@ const Schema = mongoose.Schema
 const Skill = new Schema(
     {
         skillgroup: { type: String, required: true },
+        category:{ type:String,required:true},
         subskills: { type: Array, required: true },
         media:{ type: Array, required: true },
         makers: { type: Array, required: false },
