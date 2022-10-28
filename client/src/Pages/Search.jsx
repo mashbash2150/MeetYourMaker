@@ -19,7 +19,7 @@ const Search = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     console.log(formState)
-    let response = await axios.get(`/search/${formState}`, formState)
+    let response = await axios.get(`http://localhost:3001/api/search/${formState}`, formState)
     console.log(response)
     setSearchReturn(response.data.makers)
     setFormState('')

@@ -5,14 +5,14 @@ const Schema = mongoose.Schema
 
 const Maker = new Schema(
     {
-        name: { type: String, required: true },
-        city: { type: String, required: true },
-        state: { type: String, required: true },
+        name: { type: String, required: true},
+        city: { type: String, required: false},
+        state: { type: String, required: false },
         summary: { type: String, required: false },
-        skillgroup: { type: String, required: true },
+        skillgroup: { type: String, required: false },
         subskills:{type:Array,required:false},
         image:{type:String, required:false},
-        email:{type:String,required:true},
+        email:{type:String,required:false},
         phone: { type: String, required: false },
         status: { type: String, required: false },
         rating: { type: String, required: false },

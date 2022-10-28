@@ -496,7 +496,7 @@ form {
 
 
 
-.delete {
+.deleted {
   grid-column-start: 2;
   grid-row-start: 2;
   font-size: 10vh;
