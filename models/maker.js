@@ -11,7 +11,6 @@ const Maker = new Schema(
         skillgroup: { type: String, required: true },
         subskills:{type:Array,required:false},
         image:{type:String, required:false},
-        gallery: { type: Array, required: false },
         email:{type:String,required:true},
         phone: { type: String, required: false },
         status: { type: String, required: false },

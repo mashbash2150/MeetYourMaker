@@ -80,8 +80,6 @@ body {
   height: 30vh;
   text-decoration: none;
   text-align: left;
-  border-top: 100px;
-  border-bottom: 100px;
 
 }
 
@@ -237,7 +235,7 @@ body {
   justify-items: right;
   align-items: flex-end;
   font-size: 2.5vw;
-  z-index: 0;
+  z-index: 25;
   text-align: right;
 
   padding: 9vh 2vw 0 0;
