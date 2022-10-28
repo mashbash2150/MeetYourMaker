@@ -18,6 +18,7 @@ router.get("/makers/add", controllers.createMaker)
 router.post("/makers/add", controllers.createMaker)
 
 router.get("/makers",controllers.getMakers)
+router.get("/skills",controllers.getAllSkills)
 router.get("/skills/:skillgroup",controllers.getSkill)
 
 router.get(`/makers/:id`, controllers.getMakersById)

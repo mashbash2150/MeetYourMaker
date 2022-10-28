@@ -49,11 +49,20 @@ const getMakersById= async (req,res)=>{
 }
 }
 
+const getAllSkills= async (req,res)=>{
+    try {
+      const skills = await Skill.find()
+      return res.status(200).json({ skills })
+  } catch (error) {
+      return res.status(500).send(error.message);
+  }
+  }
+
 const getSkill= async (req,res)=>{
   try {
     const { skillgroup } = req.params;
-    console.log(req.params)
-    const skill = await Skill.find(skillgroup)
+    console.log(skillgroup)
+    const skill = await Skill.find({category:skillgroup})
     if (skill) {
         return res.status(200).json({ skill});
     }
@@ -145,5 +154,6 @@ module.exports={
   deleteMaker,
   getMakerToUpdate,
   getAllByCraft,
-  getSkill
+  getSkill,
+  getAllSkills
 }
