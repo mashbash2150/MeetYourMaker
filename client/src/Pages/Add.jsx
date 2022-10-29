@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Navigate, useNavigate } from "react-router-dom"
 
 const BASE_URL = "/api"
 
 const AddMaker = () => {
+  let navigate = useNavigate()
   const [newMaker, setNewMaker] = useState([])
   const [skillList, setSkillList] = useState([])
   const initialState = {
@@ -40,7 +42,7 @@ const AddMaker = () => {
     console.log(formState)
     axios.post(`http://localhost:3001/api/makers/add`, formState)
     setFormState(initialState)
-    document.querySelector(".hidden").style.opacity = 1.0
+    navigate(-1)
   }
 
 

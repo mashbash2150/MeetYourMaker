@@ -35,6 +35,28 @@ const getFeaturedMakers=async(req,res)=>{
 }
 }
 
+const getMakerProjects=async(req,res)=>{
+  try {
+    const {id}=req.params
+    const projects = await Project.find({maker:id})
+    return res.status(200).json({ projects })
+} catch (error) {
+    return res.status(500).send(error.message);
+}
+}
+
+const createProject = async (req, res) => {
+  try {
+      const project = await new Project(req.body)
+      await project.save()
+      return res.status(201).json({
+          project,
+      });
+  } catch (error) {
+      return res.status(500).json({ error: error.message })
+  }
+}
+
 const getMakersById= async (req,res)=>{
   try {
     const { id } = req.params;
@@ -145,6 +167,19 @@ const deleteMaker = async (req, res) => {
   }
 }
 
+const deleteProject = async (req, res) => {
+  try {
+      const { pid } = req.params;
+      const deleted = await Project.findByIdAndDelete(pid)
+      if (deleted) {
+          return res.status(200).send("Project deleted");
+      }
+      throw new Error("Project not found");
+  } catch (error) {
+      return res.status(500).send(error.message);
+  }
+}
+
 
 
 module.exports={
@@ -160,5 +195,8 @@ module.exports={
   getMakerToUpdate,
   getAllByCraft,
   getSkill,
-  getAllSkills
+  getAllSkills,
+  getMakerProjects,
+  createProject,
+  deleteProject
 }

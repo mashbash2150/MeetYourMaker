@@ -31,9 +31,7 @@ const MakerDetails = () => {
     alert("Are you sure you want to delete this entry?")
     const response = await axios.delete(`http://localhost:3001/api/makers/${id}`)
     setMakerDetails("")
-    document.querySelector(".deleted").style.opacity = 1.0
-    document.querySelector(".icon2").style.opacity = 0.0
-    document.querySelector(".icon3").style.opacity = 0.0
+    navigate(-1)
 
 
 
@@ -44,6 +42,12 @@ const MakerDetails = () => {
     console.log(makerDetails._id);
     navigate(`/makers/update/${arg}`);
     <Edit id={makerDetails._id} />
+  }
+
+  const seeProjects = (arg) => {
+    console.log(makerDetails._id);
+    navigate(`/makers/${arg}/projects`);
+    // <AddProject id={makerDetails._id} />
   }
 
   return (
@@ -59,6 +63,8 @@ const MakerDetails = () => {
           {skills?.map((skill) => (
             <h4>{skill}</h4>
           ))}</div>
+
+        <button className="projectbutton" onClick={() => seeProjects(makerDetails._id)}>See This Maker's Projects</button>
         <div className="contact-details">Contact info:
           <div>{makerDetails.email}
             <a href="mailto:someone@yoursite.com" > <span className="icon material-symbols-outlined">
@@ -76,6 +82,7 @@ const MakerDetails = () => {
       <div className="details-image" >
         <img src={makerDetails.image} alt=''></img>
       </div>
+
 
       <div className="deleted">DELETED</div>
     </div>

@@ -137,7 +137,7 @@ a {
   grid-row-start: 3;
   grid-column-start: 1;
   height: 30vh;
-  font-size: 7vw;
+  font-size: 5vh;
   width: 80vw;
   font-family: 'Tomorrow', sans-serif;
   align-self: center;
@@ -183,6 +183,49 @@ a {
 
 }
 
+.project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-container {
+  display: flex;
+
+  width: 100vw;
+  grid-template-columns: 1fr;
+
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(207, 154, 21, 0.7);
+  min-height: 35vh;
+  margin: 0;
+  border-radius: 20px;
+
+}
+
+.project-button {
+  display: flex;
+  justify-content: center;
+}
+
+.project-image img {
+  border-radius: 10%;
+  z-index: 5%;
+  width: auto;
+  height: 35vh;
+  object-fit: cover;
+
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
 
 .makerCard {
   display: grid;
@@ -312,7 +355,7 @@ a {
   flex-direction: column;
   justify-content: right;
   align-items: flex-end;
-  font-size: 2.5vw;
+  font-size: 2.5vh;
   z-index: 25;
   text-align: right;
   padding: 6vh 2vw 0 0;
@@ -323,8 +366,9 @@ a {
 
 .banner {
   margin: 0 auto;
-  padding: 0 5px;
-  background-color: rgba(225, 188, 102, 0.72)
+  padding: 0.5vh 5vw;
+  width: fit-content;
+  color: rgb(222, 186, 6)
 }
 
 
@@ -389,11 +433,13 @@ a {
 
 .details-header {
   font-size: 3.5vh;
+  margin-bottom: 2vh;
 }
 
 .status {
   font-size: 2vh;
-  color: rgb(56, 8, 8)
+  color: rgb(56, 8, 8);
+  margin-bottom: 2vh;
 }
 
 .option {
@@ -463,7 +509,7 @@ a {
 
 .subheader {
   text-align: center;
-  font-size: 2.5vw;
+  font-size: 3.0vw;
   background: rgb(183, 182, 182);
   margin: -3vh 0 4vh 0;
   padding: 10px;
@@ -483,6 +529,14 @@ form {
   justify-items: center;
   margin: 5vh 0 0 0;
 
+}
+
+button {
+  border: 0.5px dashed black;
+  background-color: rgb(195, 186, 130);
+  padding: 2vw;
+  font-size: 2vh;
+  margin: 3vh 0;
 }
 
 .hidden {
@@ -516,4 +570,179 @@ form {
 
 .feature {
   margin: 0vh 0 2.5vh 0;
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2vw;
+    margin: 0vw 2vw 0 2vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .makerCard {
+    display: grid;
+    width: auto-fill;
+    background-color: rgba(207, 154, 21, 0.7);
+    min-height: 35vh;
+    margin: 0;
+    border-radius: 20px;
+
+    padding: 1.5vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .staticFeatureInfo {
+    text-align: left;
+    padding: -10px 0px 0px 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    height: auto;
+    border-radius: 7%;
+    opacity: 1.0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .staticFeatureInfo img {
+    object-fit: cover;
+    width: 90vw;
+    height: 20vh;
+    border-radius: 5%;
+    opacity: 1.0;
+    text-align: center;
+    z-index: 0
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .staticCardInfo {
+    display: grid;
+    text-align: left;
+    padding: -10px 0px 0px 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    height: 30px;
+    border-radius: 7%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .staticCardInfo img {
+    object-fit: cover;
+    width: 100vw;
+    height: auto;
+    border-radius: 5%;
+    opacity: 1.0;
+    text-align: center;
+    z-index: 0
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .feature-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+
+
+
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .featureCard {
+    display: grid;
+    width: 90vw;
+    background-color: rgba(118, 114, 104, 0.8);
+    min-height: 25vh;
+    opacity: 1.0;
+    border-radius: 20px;
+    border: 0.5px dashed black;
+    padding: 1.5vw;
+    margin: 2vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .skill-tile p {
+    display: flex;
+    background-color: rgba(149, 150, 153, 0.633);
+    color: rgba(0, 0, 0, 0.6);
+    width: 20vw;
+    height: 20vw;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    border: 0.5px dashed black;
+    font-size: 3vh;
+    box-shadow: 5px 5px 8px #888888;
+    opacity: 0.75;
+    text-shadow: 0 0 2px #b1a008;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .flex-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+    justify-items: center;
+    margin: 0px;
+
+
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .flex-middle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+    justify-items: center;
+    margin: 0px;
+
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .navbar {
+    grid-row: 1/3;
+    grid-column: 4/5;
+    opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-end;
+    font-size: 3.5vw;
+    z-index: 25;
+    text-align: right;
+    padding: 6vh 2vw 0 0;
+    line-height: 4vh;
+
+
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .subheader {
+    text-align: center;
+    font-size: 2.5vh;
+    background: rgb(183, 182, 182);
+    margin: -3vh 0 4vh 0;
+    padding: 10px;
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Tomorrow', sans-serif;
+
+  }
 }

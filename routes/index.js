@@ -22,6 +22,10 @@ router.get("/skills",controllers.getAllSkills)
 router.get("/skills/:skillgroup",controllers.getSkill)
 
 router.get(`/makers/:id`, controllers.getMakersById)
+router.post(`/makers/:id/add`, controllers.createProject)
+router.get(`/makers/:id/projects`, controllers.getMakerProjects)
+router.delete(`/makers/:id/projects/:pid`, controllers.deleteProject)
+
 
 
 
