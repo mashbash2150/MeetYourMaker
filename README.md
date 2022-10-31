@@ -48,6 +48,10 @@ This app will be built using MERN stack technologies:
 
 - [ ] Ensure browse by category pages with no resutls still show the "description blurb"
 - [ ] Better navigation after Add/edit/delete
+- [ ] Make Projects Editable
+- [ ] Field for maker website
+- [ ] Fix centering of Add Project Button
+- [ ] Improve distinction between makers just showing their talent, and those looking for work
 - [ ] Improve skill - maker and project - maker relationships
 - [ ] Improve search functionality - currently only works with verbatim city searches  (POST MVP)
 - [ ] Implement project bidding  (POST MVP)
