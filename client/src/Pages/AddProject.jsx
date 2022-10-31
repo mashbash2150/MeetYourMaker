@@ -25,7 +25,7 @@ const AddProject = () => {
     e.preventDefault()
     axios.post(`${BASE_URL}/makers/${id}/add`, formState)
     setFormState(initialState)
-    navigate(-1)
+    navigate(`/makers/${id}/projects`)
 
   }
 

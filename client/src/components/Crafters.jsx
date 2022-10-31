@@ -18,7 +18,7 @@ const Crafters = ({ text }) => {
 
   const getDescription = async () => {
 
-    const response = await axios.get(`/skills/${skillgroup}`)
+    const response = await axios.get(`/makers/skills/${skillgroup}`)
     setSkillDetails(response.data.skill[0])
 
   }
