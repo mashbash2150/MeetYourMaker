@@ -23,8 +23,6 @@ const AddProject = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(id)
-    // axios.post(`http://localhost:3001/api/makers/${id}/add`, formState)
     axios.post(`${BASE_URL}/makers/${id}/add`, formState)
     setFormState(initialState)
     navigate(-1)
@@ -34,7 +32,6 @@ const AddProject = () => {
 
 
   const handleChange = (e) => {
-    console.log(e)
     setFormState({ ...formState, [e.target.id]: e.target.value })
   }
 

@@ -10,7 +10,6 @@ const BASE_URL = "/api"
 
 
 const Crafters = ({ text }) => {
-  console.log(text)
   let navigate = useNavigate()
   let { skillgroup } = useParams()
 
@@ -18,19 +17,14 @@ const Crafters = ({ text }) => {
   const [skillDetails, setSkillDetails] = useState({})
 
   const getDescription = async () => {
-    console.log(skillgroup)
+
     const response = await axios.get(`/skills/${skillgroup}`)
-    // const response = await axios.get(`http://localhost:3001/api/skills/${skillgroup}`)
-    console.log(response.data.skill)
     setSkillDetails(response.data.skill[0])
-    console.log(skillDetails)
+
   }
 
   const getCrafters = async () => {
-    console.log(skillgroup)
     const response = await axios.get(`/makers/skills/${skillgroup}`)
-    // const response = await axios.get(`http://localhost:3001/api/makers/skills/${skillgroup}`)
-    console.log(response)
     setCrafters(response.data.craft)
   }
 

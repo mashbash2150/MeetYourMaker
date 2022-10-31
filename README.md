@@ -5,13 +5,13 @@
 
 ### By: Madeline Ashley
 
-### [LinkedIn](https://www.linkedin.com/in/madeline-ashley-11a4413a/) | [GitHub](https://github.com/mashbash2150) | [Trello Board](https://trello.com/invite/b/VHeHUY6Y/ATTIe4ac9d23cda64f2086eee7f786abff77491FF058/meet-your-maker-sei-project-2) | [Website](www.hellomashley.com)
+### [LinkedIn](https://www.linkedin.com/in/madeline-ashley-11a4413a/) | [GitHub](https://github.com/mashbash2150) | [Trello Board](https://trello.com/invite/b/VHeHUY6Y/ATTIe4ac9d23cda64f2086eee7f786abff77491FF058/meet-your-maker-sei-project-2) | [Website](meet-your-maker.herokuapp.com/)
 
 ---
 
 ### **_Description_**
 
-#### Welcome to "Meet Your Maker" - a platform that recognizes and celebrates the unsung hobbyists, doers, creators and makers of the world. Curious about the talent that lives in your neighborhood?   Looking for someone to build you a dining room table? Bake a cake for your birthday party? Fabricate and 3D print a custom part for your motorcycle?  Meet Your Maker will connect you with local doers to help you accomplish your task.  The site is multi-focuesed, serving as a directory for hireable local talent that would otherwise have little to no exposure, a meeting place for like-minded creatives, and (post-MVP) a buisness platform where jobs can be commissioned.  
+#### Welcome to "Meet Your Maker" - a platform that recognizes and celebrates the unsung hobbyists, doers, creators and makers of the world. Curious about the talent that lives in your neighborhood?   Looking for someone to build you a dining room table? Bake a cake for your birthday party? Fabricate and 3D print a custom part for your motorcycle?  Meet Your Maker will connect you with local doers to help you accomplish your task.  The site is multi-focuesed, serving as a directory for local talent that would otherwise have little to no exposure, a place to view their impressive skills, and in the long term, a platform where jobs can be commissioned. 
 
 ---
 
@@ -39,17 +39,17 @@ This app will be built using MERN stack technologies:
 
 #### _Where I will address any known issues or fixes planned for the future..._
 
-- [ ] Bug Fix 
-- [ ] Bug Fix 
-- [ ] Bug Fix 
-- [ ] Future Update 1
-- [ ] Future Update 2
+- [ ] Ensure browse by category pages with no resutls still show the "description blurb"
+- [ ] Improve skill - maker and project - maker relationships
+- [ ] Improve search functionality - currently only works with verbatim city searches  (POST MVP)
+- [ ] Implement project bidding  (POST MVP)
+
 
 ---
 
 ### **_Credits_**
 
-#### _Where I will credit my long list of resources_
+####
 
 
 #### Markdown Guide: [IA.net](https://ia.net/writer/support/general/markdown-guide)
@@ -70,3 +70,13 @@ https://stackoverflow.com/questions/33851508/why-doesnt-my-react-js-form-accept-
 https://fonts.google.com/icons?icon.query=mail&icon.platform=web
 
 https://www.w3schools.com/css/css_form.asp
+
+https://duckduckgo.com/?q=object-fit+css+image&atb=v344-1&ia=web
+
+https://www.educative.io/answers/how-to-enlarge-an-image-on-hover-in-html
+
+https://code-paper.com/javascript/examples-how-to-add-multiple-styles-inline-in-react
+
+https://www.codeconcisely.com/posts/react-navigation/  (props to Jeremy harrell for Navigate(-1) tip)
+
+https://reactjs.org/docs/cross-origin-errors.html

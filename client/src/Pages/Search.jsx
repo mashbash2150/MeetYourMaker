@@ -12,16 +12,12 @@ const Search = () => {
   const BASE_URL = "/api"
 
   const handleChange = (e) => {
-    console.log(e)
     setFormState(e.target.value)
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(formState)
-    // let response = await axios.get(`http://localhost:3001/api/search/${formState}`, formState)
     let response = await axios.get(`${BASE_URL}/search/${formState}`, formState)
-    console.log(response)
     setSearchReturn(response.data.makers)
     setFormState('')
 

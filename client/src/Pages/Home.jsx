@@ -25,8 +25,7 @@ const Home = () => {
 
   const getCrafters = async (e) => {
     setSkillGroup(e.target.innerText)
-    console.log(e.target.innerText)
-    navigate(`${BASE_URL}/makers/skills/${e.target.innerText.toLowerCase()}`);
+    navigate(`/makers/skills/${e.target.innerText.toLowerCase()}`);
 
 
   }

@@ -26,9 +26,7 @@ const AddMaker = () => {
   useEffect(() => {
     const getMakers = async () => {
       try {
-        // let response = await axios.get('http://localhost:3001/api/makers')
         let response = await axios.get(`${BASE_URL}/makers`)
-        console.log(response.data.makers)
         setNewMaker(response.data.makers)
       } catch (err) {
         console.log(err)
@@ -39,17 +37,14 @@ const AddMaker = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(formState)
-    // axios.post(`http://localhost:3001/api/makers/add`, formState)
     axios.post(`${BASE_URL}/makers/add`, formState)
     setFormState(initialState)
-    navigate(-1)
+    navigate(`/makers`)
   }
 
 
 
   const handleChange = (e) => {
-    console.log(e)
     setFormState({ ...formState, [e.target.id]: e.target.value })
   }
 

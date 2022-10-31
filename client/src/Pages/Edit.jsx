@@ -6,13 +6,11 @@ const BASE_URL = "/api"
 
 const UpdateMaker = ({ }) => {
   let { id } = useParams()
-  console.log(id)
   const [updateMaker, setUpdateMaker] = useState([])
   const [makerDetails, setMakerDetails] = useState({})
   const [formState, setFormState] = useState({})
 
   const getMakerDetails = async (e) => {
-    // const response = await axios.get(`http://localhost:3001/api/makers/update/${id}`)
     const response = await axios.get(`${BASE_URL}/makers/update/${id}`)
     setMakerDetails(response.data.maker)
     setFormState({
@@ -37,7 +35,6 @@ const UpdateMaker = ({ }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // axios.put(`http://localhost:3001/api/makers/update/${id}`, formState)
     axios.put(`${BASE_URL}/makers/update/${id}`, formState)
     document.querySelector(".hidden").style.opacity = 1.0
 

@@ -18,7 +18,6 @@ const MakerDetails = () => {
   const getMakerDetails = async (e) => {
     // const response = await axios.get(`http://localhost:3001/api/makers/${id}`)
     const response = await axios.get(`${BASE_URL}/makers/${id}`)
-    console.log(response.data.maker)
     setSkills(response.data.maker.subskills)
 
     setMakerDetails(response.data.maker)
@@ -41,15 +40,12 @@ const MakerDetails = () => {
   }
 
   const updateMaker = (arg) => {
-    console.log(makerDetails._id);
     navigate(`/makers/update/${arg}`);
     <Edit id={makerDetails._id} />
   }
 
   const seeProjects = (arg) => {
-    console.log(makerDetails._id);
     navigate(`/makers/${arg}/projects`);
-    // <AddProject id={makerDetails._id} />
   }
 
   return (
