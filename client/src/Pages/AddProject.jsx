@@ -2,11 +2,12 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from "react-router-dom"
 // import maker from '../../../models/maker'
-
+import { Navigate, useNavigate } from "react-router-dom"
 const BASE_URL = "/api"
 
 const AddProject = () => {
   let { id } = useParams()
+  let navigate = useNavigate()
   const [newProject, setNewProject] = useState({})
   const [skillList, setSkillList] = useState([])
   const initialState = {
@@ -18,26 +19,16 @@ const AddProject = () => {
   const [formState, setFormState] = useState(initialState)
   const [inputValue, setInputValue] = useState("")
 
-  // useEffect(() => {
-  //   const getMakers = async () => {
-  //     try {
-  //       let response = await axios.get('http://localhost:3001/api/makers')
-  //       // let response = await axios.get(`/makers`)
-  //       console.log(response.data.makers)
-  //       setNewMaker(response.data.makers)
-  //     } catch (err) {
-  //       console.log(err)
-  //     }
-  //   }
-  //   getMakers()
-  // }, [])
+
 
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log(id)
-    axios.post(`http://localhost:3001/api/makers/${id}/add`, formState)
+    // axios.post(`http://localhost:3001/api/makers/${id}/add`, formState)
+    axios.post(`makers/${id}/add`, formState)
     setFormState(initialState)
-    document.querySelector(".hidden").style.opacity = 1.0
+    navigate(-1)
+
   }
 
 
@@ -60,7 +51,7 @@ const AddProject = () => {
           <label className="label imageField" htmlFor="imageurl">Image URL:</label>
           <input className="input imageField" type="text" id="image" cols="30" onChange={handleChange} value={formState.image} />
 
-          <button onClick={handleSubmit} className="input submitbutton" type="submit">Submit Project</button>
+          <button onClick={handleSubmit} className="submitbutton" type="submit">Submit Project</button>
 
           <div>
 

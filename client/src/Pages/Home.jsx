@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react"
-// import maker from "../../../models/maker"
+
 import axios from "axios"
-import MakerDetails from "../Pages/MakerDetails"
-import Crafters from "../components/Crafters"
+
 import { Navigate, useNavigate } from "react-router-dom"
-// import { $where } from "../../../models/skills"
 const BASE_URL = "/api"
 
 const Home = () => {

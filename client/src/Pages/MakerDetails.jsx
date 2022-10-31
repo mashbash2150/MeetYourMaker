@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-// import maker from "../../../models/maker"
+
 import axios from "axios"
 import Edit from "./Edit"
 import { Navigate, useNavigate } from "react-router-dom"
@@ -16,7 +16,8 @@ const MakerDetails = () => {
   const [skills, setSkills] = useState([])
 
   const getMakerDetails = async (e) => {
-    const response = await axios.get(`http://localhost:3001/api/makers/${id}`)
+    // const response = await axios.get(`http://localhost:3001/api/makers/${id}`)
+    const response = await axios.get(`/makers/${id}`)
     console.log(response.data.maker)
     setSkills(response.data.maker.subskills)
 
@@ -29,7 +30,8 @@ const MakerDetails = () => {
 
   const deleteMaker = async () => {
     alert("Are you sure you want to delete this entry?")
-    const response = await axios.delete(`http://localhost:3001/api/makers/${id}`)
+    // const response = await axios.delete(`http://localhost:3001/api/makers/${id}`)
+    const response = await axios.delete(`/makers/${id}`)
     setMakerDetails("")
     navigate(-1)
 

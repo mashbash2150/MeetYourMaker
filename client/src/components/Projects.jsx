@@ -22,7 +22,8 @@ const Projects = ({ text }) => {
   const getProjects = async () => {
 
     // const response = await axios.get(`/skills/${skillgroup}`)
-    const response = await axios.get(`http://localhost:3001/api/makers/${id}/projects`)
+    // const response = await axios.get(`http://localhost:3001/api/makers/${id}/projects`)
+    const response = await axios.get(`/makers/${id}/projects`)
     console.log(response.data.projects)
     setProjects(response.data.projects)
 
@@ -37,7 +38,8 @@ const Projects = ({ text }) => {
 
   const deleteProject = async (arg) => {
     alert("Are you sure you want to delete this entry?")
-    const response = await axios.delete(`http://localhost:3001/api/makers/${id}/projects/${arg}`)
+    // const response = await axios.delete(`http://localhost:3001/api/makers/${id}/projects/${arg}`)
+    const response = await axios.delete(`/makers/${id}/projects/${arg}`)
     setDeleted(true)
     navigate(-1)
 
@@ -50,9 +52,7 @@ const Projects = ({ text }) => {
     getProjects()
   }, [deleted])
 
-  // if (crafters.length === 0) {
-  //   return (<h1 className="noresults">NO MAKERS OF THIS SPECIALTY YET <br></br>COULD YOU BE THE NEXT?</h1>)
-  // } else {
+
   return (
 
     <div>

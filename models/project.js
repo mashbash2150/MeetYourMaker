@@ -18,8 +18,5 @@ const Project = new Schema(
     { timestamps: true },
 )
 
-// module.exports=Maker
 
-
-//i need help understanding why db will ony seed with this, but server will only run with above
 module.exports = mongoose.model('Project', Project)

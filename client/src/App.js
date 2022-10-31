@@ -1,7 +1,6 @@
 
 import './App.css';
-import Nav from "./components/Nav"
-import Feed from "./Pages/Feed"
+
 import Home from "./Pages/Home"
 import About from "./Pages/About"
 import Add from "./Pages/Add"
@@ -13,7 +12,6 @@ import Edit from "./Pages/Edit"
 import AddProject from "./Pages/AddProject";
 import Projects from "./components/Projects"
 import { Route, Routes } from 'react-router-dom'
-import { Link } from 'react-router-dom';
 import MakerDetails from './Pages/MakerDetails';
 
 

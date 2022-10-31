@@ -19,7 +19,8 @@ const Search = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     console.log(formState)
-    let response = await axios.get(`http://localhost:3001/api/search/${formState}`, formState)
+    // let response = await axios.get(`http://localhost:3001/api/search/${formState}`, formState)
+    let response = await axios.get(`/search/${formState}`, formState)
     console.log(response)
     setSearchReturn(response.data.makers)
     setFormState('')
@@ -32,6 +33,7 @@ const Search = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <div><em>**  Component under Construction.  Currently only searchable by city **</em></div>
       <input className="input" onChange={handleChange}
         type="text"
         name="search"

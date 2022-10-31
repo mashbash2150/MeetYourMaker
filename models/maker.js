@@ -1,4 +1,4 @@
-//populated based on plants exercises
+
 
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
@@ -22,8 +22,4 @@ const Maker = new Schema(
     { timestamps: true },
 )
 
-// module.exports=Maker
-
-
-//i need help understanding why db will ony seed with this, but server will only run with above
 module.exports = mongoose.model('Maker', Maker)
