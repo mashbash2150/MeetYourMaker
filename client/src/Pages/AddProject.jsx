@@ -25,7 +25,7 @@ const AddProject = () => {
     e.preventDefault()
     console.log(id)
     // axios.post(`http://localhost:3001/api/makers/${id}/add`, formState)
-    axios.post(`makers/${id}/add`, formState)
+    axios.post(`${BASE_URL}/makers/${id}/add`, formState)
     setFormState(initialState)
     navigate(-1)
 

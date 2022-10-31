@@ -23,7 +23,7 @@ const Projects = ({ text }) => {
 
     // const response = await axios.get(`/skills/${skillgroup}`)
     // const response = await axios.get(`http://localhost:3001/api/makers/${id}/projects`)
-    const response = await axios.get(`/makers/${id}/projects`)
+    const response = await axios.get(`${BASE_URL}/makers/${id}/projects`)
     console.log(response.data.projects)
     setProjects(response.data.projects)
 
@@ -39,7 +39,7 @@ const Projects = ({ text }) => {
   const deleteProject = async (arg) => {
     alert("Are you sure you want to delete this entry?")
     // const response = await axios.delete(`http://localhost:3001/api/makers/${id}/projects/${arg}`)
-    const response = await axios.delete(`/makers/${id}/projects/${arg}`)
+    const response = await axios.delete(`${BASE_URL}/makers/${id}/projects/${arg}`)
     setDeleted(true)
     navigate(-1)
 

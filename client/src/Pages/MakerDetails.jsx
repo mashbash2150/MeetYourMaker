@@ -17,7 +17,7 @@ const MakerDetails = () => {
 
   const getMakerDetails = async (e) => {
     // const response = await axios.get(`http://localhost:3001/api/makers/${id}`)
-    const response = await axios.get(`/makers/${id}`)
+    const response = await axios.get(`${BASE_URL}/makers/${id}`)
     console.log(response.data.maker)
     setSkills(response.data.maker.subskills)
 
@@ -31,7 +31,7 @@ const MakerDetails = () => {
   const deleteMaker = async () => {
     alert("Are you sure you want to delete this entry?")
     // const response = await axios.delete(`http://localhost:3001/api/makers/${id}`)
-    const response = await axios.delete(`/makers/${id}`)
+    const response = await axios.delete(`${BASE_URL}/makers/${id}`)
     setMakerDetails("")
     navigate(-1)
 

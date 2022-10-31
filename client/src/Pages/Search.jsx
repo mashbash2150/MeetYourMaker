@@ -20,7 +20,7 @@ const Search = () => {
     e.preventDefault()
     console.log(formState)
     // let response = await axios.get(`http://localhost:3001/api/search/${formState}`, formState)
-    let response = await axios.get(`/search/${formState}`, formState)
+    let response = await axios.get(`${BASE_URL}/search/${formState}`, formState)
     console.log(response)
     setSearchReturn(response.data.makers)
     setFormState('')

@@ -27,7 +27,7 @@ const AddMaker = () => {
     const getMakers = async () => {
       try {
         // let response = await axios.get('http://localhost:3001/api/makers')
-        let response = await axios.get(`/makers`)
+        let response = await axios.get(`${BASE_URL}/makers`)
         console.log(response.data.makers)
         setNewMaker(response.data.makers)
       } catch (err) {
@@ -41,7 +41,7 @@ const AddMaker = () => {
     e.preventDefault()
     console.log(formState)
     // axios.post(`http://localhost:3001/api/makers/add`, formState)
-    axios.post(`/makers/add`, formState)
+    axios.post(`${BASE_URL}/makers/add`, formState)
     setFormState(initialState)
     navigate(-1)
   }
