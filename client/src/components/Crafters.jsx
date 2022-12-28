@@ -6,7 +6,7 @@ import MakerDetails from "../Pages/MakerDetails"
 // import ProjectDetails from "../Pages/ProjectDetails"
 import { Navigate, useNavigate } from "react-router-dom"
 
-const BASE_URL = "/api"
+// `const BASE_URL = "/api"`
 
 
 const Crafters = ({ text }) => {
@@ -18,17 +18,28 @@ const Crafters = ({ text }) => {
 
   const getDescription = async () => {
 
-    const response = await axios.get(`${BASE_URL}/skills/${skillgroup}`)
+    // const response = await axios.get(`${BASE_URL}/skills/${skillgroup}`)
+    const response = await axios.get(`http://localhost:3001/api/skills/${skillgroup}`)
+    let skills = response.data.skill
+    console.log(skills)
     setSkillDetails(response.data.skill[0])
 
   }
 
   const getCrafters = async () => {
-    const response = await axios.get(`${BASE_URL}/makers/skills/${skillgroup}`)
+    const response = await axios.get(`http://localhost:3001/api/makers/skills/${skillgroup}`)
     setCrafters(response.data.craft)
   }
 
+  const getCrafterDetails = async (arg) => {
+
+    navigate(`/makers/${arg._id}`);
+
+
+  }
+
   useEffect(() => {
+
     getCrafters()
   }, [])
 
@@ -46,19 +57,19 @@ const Crafters = ({ text }) => {
         <div className="description-blurb"><em>Makers in this category generally specialize in:</em></div>
         {skillDetails.subskills?.map((skill) => (
           <div>
-            <div className="description-list" key={skill._id} >{skill}</div>
+            <div className="description-list" key={skill.createdAt} >{skill}</div>
           </div>
         ))}
         <div className="description-blurb">And may work with the following media: </div>
         {skillDetails.media?.map((media) => (
           <div>
-            <div className="description-list" key={media._id} >{media}</div>
+            <div className="description-list" key={media.createdAt} >{media}</div>
           </div>
         ))}
-        <div className="craftercontainer">
+        <div className="container">
 
           {crafters?.map((crafter) => (
-            <div className="crafterCard" key={crafter._id} >
+            <div className="crafterCard" key={crafter.createdAt} onClick={() => getCrafterDetails(crafter)}>
               <div className="hide">
                 <h4>Location: </h4>
                 <h4>Skills: {crafter.skills}</h4>

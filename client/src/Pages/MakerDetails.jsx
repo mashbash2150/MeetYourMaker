@@ -33,10 +33,6 @@ const MakerDetails = () => {
     const response = await axios.delete(`${BASE_URL}/makers/${id}`)
     setMakerDetails("")
     navigate(-1)
-
-
-
-
   }
 
   const updateMaker = (arg) => {

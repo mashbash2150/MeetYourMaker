@@ -192,15 +192,15 @@ a {
 
 .project-container {
   display: flex;
-
-  width: 100vw;
+  flex-wrap: wrap;
+  width: 90vw;
   grid-template-columns: 1fr;
 
   align-items: center;
   justify-content: center;
   background-color: rgba(207, 154, 21, 0.7);
   min-height: 35vh;
-  margin: 0;
+  margin: 0 auto;
   border-radius: 20px;
 
 }
@@ -422,6 +422,7 @@ a {
 .contact-details {
   font-size: 2vh;
   border: 1px dashed black;
+  border-radius: 10px;
   padding: 10px 0;
   margin: 20px 0;
 
@@ -531,8 +532,14 @@ form {
 
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
 button {
   border: 0.5px dashed black;
+  border-radius: 10px;
   background-color: rgb(195, 186, 130);
   padding: 2vw;
   font-size: 2vh;
@@ -541,6 +548,7 @@ button {
 
 .submitbutton {
   border: 0.5px dashed black;
+  border-radius: 10px;
   background-color: rgb(195, 186, 130);
 
   font-size: 2vh;
@@ -755,4 +763,8 @@ button {
     font-family: 'Tomorrow', sans-serif;
 
   }
+}
+
+.schedule-text {
+  background-color: cornflowerblue;
 }
