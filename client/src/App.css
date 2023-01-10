@@ -778,20 +778,21 @@ button {
 
 @media screen and (min-width: 1250px) {
   .container {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
     grid-template-columns: repeat(auto-fill, minmax(20vw, 350px));
     grid-gap: 5vw;
-    margin: 0vw 2vw 0 2vw;
+    margin: 0vw 1vw 0 2vw;
   }
 
   .makerCard {
-
-    display: grid;
-    width: 20vw;
-    height: 25vw;
+    width: 16vw;
+    height: 30vh;
     background-color: rgba(207, 154, 21, 0.7);
     max-width: 400px;
-    min-height: 35vh;
+
     margin: 0;
     border-radius: 20px;
 
@@ -800,7 +801,7 @@ button {
 
   .staticCardInfo img {
     object-fit: cover;
-    width: 20vw;
+    width: 16vw;
     height: 20vh;
     border-radius: 5%;
     opacity: 1.0;
@@ -809,7 +810,7 @@ button {
   }
 
   .crafterCard {
-    display: grid;
+
     width: 20vw;
     height: 18vh;
     background-color: rgba(207, 154, 21, 0.7);
