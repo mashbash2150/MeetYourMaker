@@ -18,8 +18,8 @@ const Crafters = ({ text }) => {
 
   const getDescription = async () => {
 
-    // const response = await axios.get(`${BASE_URL}/skills/${skillgroup}`)
-    const response = await axios.get(`http://localhost:3001/api/skills/${skillgroup}`)
+    const response = await axios.get(`${BASE_URL}/skills/${skillgroup}`)
+    // const response = await axios.get(`http://localhost:3001/api/skills/${skillgroup}`)
     let skills = response.data.skill
     console.log(skills)
     setSkillDetails(response.data.skill[0])
@@ -27,7 +27,8 @@ const Crafters = ({ text }) => {
   }
 
   const getCrafters = async () => {
-    const response = await axios.get(`http://localhost:3001/api/makers/skills/${skillgroup}`)
+    const response = await axios.get(`${BASE_URL}/makers/skills/${skillgroup}`)
+    // const response = await axios.get(`http://localhost:3001/api/makers/skills/${skillgroup}`)
     setCrafters(response.data.craft)
   }
 
