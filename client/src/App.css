@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Roboto+Mono:wght@200;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0');
+
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Roboto+Mono:wght@200;400&family=Tomorrow:wght@100&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0');
 
 body {
   margin: 0 auto;
@@ -14,6 +14,10 @@ body {
   opacity: 0.5;
   color: black;
 
+}
+
+main {
+  margin-top: 5vh;
 }
 
 .image-gallery {
@@ -64,14 +68,7 @@ a {
   opacity: 0.7
 }
 
-.nav {
-  background-color: #212121;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 2vw;
-  color: white;
-}
+
 
 .detailsbody {
   display: flex;
@@ -291,7 +288,9 @@ a {
   justify-content: space-evenly;
   justify-items: center;
   margin: 0px;
-  column-gap: 25px;
+  column-gap: 20px;
+
+
 
 
 }
@@ -308,13 +307,13 @@ a {
   display: flex;
   background-color: rgba(149, 150, 153, 0.633);
   color: rgba(0, 0, 0, 0.6);
-  width: 13vw;
-  height: 13vw;
+  width: 12vw;
+  height: 12vw;
   justify-content: center;
   align-items: center;
   border-radius: 10%;
   border: 0.5px dashed black;
-  font-size: 3vh;
+  font-size: 2.25vw;
   box-shadow: 5px 5px 8px #888888;
   opacity: 0.75;
   text-shadow: 0 0 2px #b1a008;
@@ -352,18 +351,19 @@ a {
 }
 
 .navbar {
+
   grid-row: 1/3;
   grid-column: 4/5;
-  opacity: 0.7;
+  opacity: 0.9;
   display: flex;
   flex-direction: column;
   justify-content: right;
   align-items: flex-end;
-  font-size: 2.5vh;
+  font-size: 2vw;
   z-index: 25;
   text-align: right;
-  padding: 6vh 2vw 0 0;
-  line-height: 4vh;
+  padding: 4vh 3vh 0 0;
+  line-height: 5vh;
 
 
 }
@@ -416,6 +416,8 @@ a {
 .icon {
   padding: 10px;
 }
+
+
 
 .skills-list {
 
