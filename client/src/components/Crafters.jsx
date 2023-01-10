@@ -37,15 +37,15 @@ const Crafters = ({ text }) => {
 
 
   }
-
+  useEffect(() => {
+    getDescription()
+  }, [])
   useEffect(() => {
 
     getCrafters()
   }, [])
 
-  useEffect(() => {
-    getDescription()
-  }, [])
+
 
   if (crafters.length === 0) {
     return (<h1 className="noresults">NO MAKERS OF THIS SPECIALTY YET <br></br>COULD YOU BE THE NEXT?</h1>)
