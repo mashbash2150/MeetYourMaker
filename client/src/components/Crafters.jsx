@@ -6,7 +6,7 @@ import MakerDetails from "../Pages/MakerDetails"
 // import ProjectDetails from "../Pages/ProjectDetails"
 import { Navigate, useNavigate } from "react-router-dom"
 
-// `const BASE_URL = "/api"`
+const BASE_URL = "/api"
 
 
 const Crafters = ({ text }) => {
