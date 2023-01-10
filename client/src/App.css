@@ -11,7 +11,8 @@ body {
   font-family: 'Rajdhani', sans-serif;
   background-image: url("https://images.unsplash.com/photo-1528458909336-e7a0adfed0a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1348&q=80");
   background-size: cover;
-  opacity: 0.7;
+  opacity: 0.5;
+  color: black;
 
 }
 
@@ -114,6 +115,8 @@ a {
   text-decoration: none;
   text-align: left;
 
+
+
 }
 
 .header img {
@@ -137,13 +140,14 @@ a {
   grid-row-start: 3;
   grid-column-start: 1;
   height: 30vh;
-  font-size: 5vh;
+  font-size: 7vw;
   width: 80vw;
   font-family: 'Tomorrow', sans-serif;
   align-self: center;
   z-index: -1;
   margin: 3vh 0 0vh 3vw;
   text-shadow: 0 0 10px #b1a008;
+  opacity: 1;
 
 }
 
