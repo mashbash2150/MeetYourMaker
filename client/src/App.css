@@ -136,13 +136,13 @@ a {
 
   grid-row-start: 3;
   grid-column-start: 1;
-  height: 30vh;
+
   font-size: 7vw;
   width: 80vw;
   font-family: 'Tomorrow', sans-serif;
   align-self: center;
   z-index: -1;
-  margin: 3vh 0 0vh 3vw;
+  margin: 3vh 0 5vh 3vw;
   text-shadow: 0 0 10px #b1a008;
   opacity: 1;
 
@@ -605,9 +605,9 @@ button {
     grid-gap: 2vw;
     margin: 0vw 2vw 0 2vw;
   }
-}
 
-@media screen and (max-width: 600px) {
+
+
   .makerCard {
     display: grid;
     width: auto-fill;
@@ -618,9 +618,9 @@ button {
 
     padding: 1.5vw;
   }
-}
 
-@media screen and (max-width: 600px) {
+
+
   .staticFeatureInfo {
     text-align: left;
     padding: -10px 0px 0px 15px;
@@ -630,9 +630,9 @@ button {
     border-radius: 7%;
     opacity: 1.0;
   }
-}
 
-@media screen and (max-width: 600px) {
+
+
   .staticFeatureInfo img {
     object-fit: cover;
     width: 90vw;
@@ -642,9 +642,9 @@ button {
     text-align: center;
     z-index: 0
   }
-}
 
-@media screen and (max-width: 600px) {
+
+
   .staticCardInfo {
     display: grid;
     text-align: left;
@@ -654,9 +654,9 @@ button {
     height: 30px;
     border-radius: 7%;
   }
-}
 
-@media screen and (max-width: 600px) {
+
+
   .staticCardInfo img {
     object-fit: cover;
     width: 100vw;
@@ -666,10 +666,10 @@ button {
     text-align: center;
     z-index: 0
   }
-}
 
 
-@media screen and (max-width: 600px) {
+
+
   .feature-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -680,10 +680,10 @@ button {
 
 
   }
-}
 
 
-@media screen and (max-width: 600px) {
+
+
   .featureCard {
     display: grid;
     width: 90vw;
@@ -695,9 +695,9 @@ button {
     padding: 1.5vw;
     margin: 2vh;
   }
-}
 
-@media screen and (max-width: 600px) {
+
+
   .skill-tile p {
     display: flex;
     background-color: rgba(149, 150, 153, 0.633);
@@ -713,9 +713,9 @@ button {
     opacity: 0.75;
     text-shadow: 0 0 2px #b1a008;
   }
-}
 
-@media screen and (max-width: 600px) {
+
+
   .flex-top {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -726,9 +726,9 @@ button {
 
 
   }
-}
 
-@media screen and (max-width: 600px) {
+
+
   .flex-middle {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -773,4 +773,52 @@ button {
 
 .schedule-text {
   background-color: cornflowerblue;
+}
+
+
+@media screen and (min-width: 1250px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20vw, 350px));
+    grid-gap: 5vw;
+    margin: 0vw 2vw 0 2vw;
+  }
+
+  .makerCard {
+
+    display: grid;
+    width: 20vw;
+    height: 25vw;
+    background-color: rgba(207, 154, 21, 0.7);
+    max-width: 400px;
+    min-height: 35vh;
+    margin: 0;
+    border-radius: 20px;
+
+    padding: 1.5vw;
+  }
+
+  .staticCardInfo img {
+    object-fit: cover;
+    width: 20vw;
+    height: 20vh;
+    border-radius: 5%;
+    opacity: 1.0;
+    text-align: center;
+    z-index: 0
+  }
+
+  .crafterCard {
+    display: grid;
+    width: 20vw;
+    height: 18vh;
+    background-color: rgba(207, 154, 21, 0.7);
+    min-height: 35vh;
+    margin-top:
+      2vh;
+    border-radius: 20px;
+
+    padding: 1.5vw;
+  }
+
 }
