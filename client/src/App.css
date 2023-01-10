@@ -54,7 +54,7 @@ a {
 .crafterCard {
   display: grid;
   width: 28vw;
-  background-color: rgba(207, 154, 21, 0.7);
+  background-color: rgba(207, 154, 21, 0.95);
   min-height: 35vh;
   margin-top:
     2vh;
@@ -231,7 +231,7 @@ a {
 .makerCard {
   display: grid;
   width: auto-fill;
-  background-color: rgba(207, 154, 21, 0.7);
+  background-color: rgba(207, 154, 21, 0.95);
   min-height: 35vh;
   margin: 0;
   border-radius: 20px;
@@ -271,8 +271,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1vh 8vw 2vh 2vw;
-
+  padding: 0vh 8vw 5vw 2vw;
+  text-align: center;
   font-size: 2vh
 }
 
@@ -305,8 +305,8 @@ a {
 
 .skill-tile p {
   display: flex;
-  background-color: rgba(149, 150, 153, 0.633);
-  color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(130, 134, 143, 0.95);
+  color: rgba(0, 0, 0, 0.9);
   width: 12vw;
   height: 12vw;
   justify-content: center;
@@ -517,10 +517,11 @@ a {
 .subheader {
   text-align: center;
   font-size: 3.0vw;
-  background: rgb(183, 182, 182);
+  background: rgba(207, 154, 21, 0.4);
   margin: -3vh 0 4vh 0;
   padding: 10px;
-  color: rgba(0, 0, 0, 1);
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: 900;
   font-family: 'Tomorrow', sans-serif;
 
 }
@@ -611,7 +612,7 @@ button {
   .makerCard {
     display: grid;
     width: auto-fill;
-    background-color: rgba(207, 154, 21, 0.7);
+    background-color: rgba(207, 154, 21, 0.95);
     min-height: 35vh;
     margin: 0;
     border-radius: 20px;
@@ -700,7 +701,7 @@ button {
 
   .skill-tile p {
     display: flex;
-    background-color: rgba(149, 150, 153, 0.633);
+    background-color: rgba(149, 150, 153, 0.95);
     color: rgba(0, 0, 0, 0.6);
     width: 20vw;
     height: 20vw;
@@ -762,7 +763,7 @@ button {
   .subheader {
     text-align: center;
     font-size: 2.5vh;
-    background: rgb(183, 182, 182);
+    background: rgba(207, 154, 21, 0.95);
     margin: -3vh 0 4vh 0;
     padding: 10px;
     color: rgba(0, 0, 0, 1);
@@ -790,8 +791,8 @@ button {
   .makerCard {
     width: 16vw;
     height: 30vh;
-    background-color: rgba(207, 154, 21, 0.7);
-    max-width: 400px;
+    background-color: rgba(207, 154, 21, 0.95);
+    max-width: 350px;
 
     margin: 0;
     border-radius: 20px;
@@ -813,7 +814,7 @@ button {
 
     width: 20vw;
     height: 18vh;
-    background-color: rgba(207, 154, 21, 0.7);
+    background-color: rgba(207, 154, 21, 0.95);
     min-height: 35vh;
     margin-top:
       2vh;
