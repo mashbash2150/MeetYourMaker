@@ -15,15 +15,6 @@
 
 ---
 
-### **_Technologies_**
-
-This app will be built using MERN stack technologies:
-
-- MongoDB for hosting user and maker data
-- Express/Node as the web framework/server by which front and back ends are connected
-- React to power the front end web UI
-
----
 
 ### **_Screenshots_**
 
@@ -59,36 +50,3 @@ This app will be built using MERN stack technologies:
 
 ---
 
-### **_Credits_**
-
-####
-
-
-#### Markdown Guide: [IA.net](https://ia.net/writer/support/general/markdown-guide)
-
-https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_display_element_hover
-https://www.w3schools.com/howto/howto_css_dropdown.asp
-
-https://www.pngdownload.id/png-8o8h8v/
-
-https://www.w3schools.com/Css/css_link.asp
-
-https://www.w3schools.com/cssref/css3_pr_text-shadow.php
-
-https://css-tricks.com/snippets/html/mailto-links/
-
-https://stackoverflow.com/questions/33851508/why-doesnt-my-react-js-form-accept-user-input
-
-https://fonts.google.com/icons?icon.query=mail&icon.platform=web
-
-https://www.w3schools.com/css/css_form.asp
-
-https://duckduckgo.com/?q=object-fit+css+image&atb=v344-1&ia=web
-
-https://www.educative.io/answers/how-to-enlarge-an-image-on-hover-in-html
-
-https://code-paper.com/javascript/examples-how-to-add-multiple-styles-inline-in-react
-
-https://www.codeconcisely.com/posts/react-navigation/  (props to Jeremy harrell for Navigate(-1) tip)
-
-https://reactjs.org/docs/cross-origin-errors.html
